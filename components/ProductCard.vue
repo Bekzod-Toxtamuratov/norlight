@@ -23,7 +23,7 @@ const props = defineProps({
 			</p>
 			<div class="flex justify-between items-center">
 				<p class="text-sm font-bold">{{ props.data?.newPrice }}</p>
-				<button class="bg-[#454545] py-3 px-5 rounded-[100px]">
+				<button class="bg-[#454545]  py-2  md:py-3   px-3  md:px-5 rounded-[100px]">
 					<img src="/111.png" />
 				</button>
 			</div>
