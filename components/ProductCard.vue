@@ -3,7 +3,6 @@ const props = defineProps({
 	data: Object,
 })
 </script>
-
 <template>
 	<div class="card px-3 py-[30px] bg-white shadow-lg rounded-md">
 		<div class="flex justify-between px-2">

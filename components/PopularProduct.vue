@@ -18,10 +18,8 @@ const getProducts = async () => {
 	products.value = data._rawValue
 	loading.value = false
 }
-
 getProducts()
 </script>
-
 <template>
 	<div class="container mt-[100px]">
 		<div class="loading" v-if="loading">Loading ...</div>

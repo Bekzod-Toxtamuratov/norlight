@@ -5,8 +5,13 @@ export default {
 		extend: {},
 		container: {
 			center: true,
-			padding: '20px',
+			padding: '16px',
+			screes: {
+				xl: '1332px',
+				'2xl': '1332px',
+			},
 		},
+		extend: {},
 	},
 	plugins: [],
 }

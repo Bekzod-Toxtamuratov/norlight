@@ -16,8 +16,8 @@ useHead({
 		<NavbarCarusel />
 		<NavbarKatalog />
 		<NavbarPochemu />
-		<NavbarSwipper />
 		<PopularProduct />
+		<NavbarSwipper />
 		<div class="container"></div>
 	</div>
 </template>

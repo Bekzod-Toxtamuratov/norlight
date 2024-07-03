@@ -1,87 +1,168 @@
 <script setup>
-import { reactive } from 'vue'
+const showModal = ref(false)
+const showInput = ref(true)
+const showSidebar = ref(false)
 
-const myData = reactive([
-	{
-		name: 'Доставка и оплата',
-		link: '/Доставка',
-	},
-	{
-		name: 'Возврат',
-		link: '/Возврат',
-	},
-	{
-		name: 'Гарантии',
-		link: '/Гарантии',
-	},
-	{
-		name: 'Контакты',
-		link: '/Контакты',
-	},
-	{
-		name: 'Блог',
-		link: '/Блог',
-	},
-])
+const toggleModal = () => {
+	showModal.value = !showModal.value
+	showInput.value = !showInput.value
+}
+
+const toggleSidebar = () => {
+	showSidebar.value = !showSidebar.value
+	showInput.value = !showInput.value
+}
 </script>
 
 <template>
-	<header class="sticky top-0 z-50 bg-white shadow-md">
-		<div class="container mx-auto flex justify-between py-4">
-			<div class="flex items-center gap-x-8 text-gray-700">
-				<div v-for="item in myData" :key="item.link">
-					<nuxt-link :to="item.link" class="hover:text-gray-900">{{
-						item.name
-					}}</nuxt-link>
-				</div>
-			</div>
-			<div class="flex items-center gap-3">
-				<p class="cursor-pointer">8 (800) 890-46-56</p>
-				<button class="bg-blue-500 text-white px-4 py-2 rounded-full">
+	<div class="container md:mb-16">
+		<div class="md:flex hidden items-center justify-between py-3 text-sm">
+			<nav>
+				<ul class="flex gap-7 text-primary/50 font-semibold">
+					<li><nuxt-link to="">О компании</nuxt-link></li>
+					<li><nuxt-link to="">Доставка и оплата</nuxt-link></li>
+					<li><nuxt-link to="">Возврат</nuxt-link></li>
+					<li><nuxt-link to="">Гарантии</nuxt-link></li>
+					<li><nuxt-link to="">Контакты</nuxt-link></li>
+					<li><nuxt-link to="">Блог</nuxt-link></li>
+				</ul>
+			</nav>
+			<div class="flex gap-6">
+				<a class="text-primary text-sm" href="tel:+8 (800) 890-46-56"
+					>8 (800) 890-46-56</a
+				>
+				<button class="text-primary/50 font-semibold" @click="toggleModal">
 					Заказать звонок
 				</button>
 			</div>
 		</div>
-		<div class="container mx-auto flex gap-3 items-center py-4">
-			<div class="flex items-center gap-2 pr-6">
-				<img class="w-7 h-7" src="/sun.png" alt="Logo" />
-				<h2 class="text-gray-700 text-2xl font-medium cursor-pointer">
-					NORNLIGHT
-				</h2>
-			</div>
-			<button
-				class="flex bg-gray-700 text-white py-2 px-6 items-center gap-2 rounded-full"
-			>
-				<img src="/gamburger.png" alt="Menu" />
-				<p>Каталог</p>
-			</button>
-			<div class="relative w-1/2">
-				<input
-					class="py-2 w-full rounded-full border pl-5 pr-10 outline-none"
-					placeholder="Поиск по товарам"
-				/>
+		<div class="flex items-center justify-between mt-6">
+			<div class="flex gap-5">
 				<img
-					class="absolute top-1/2 transform -translate-y-1/2 right-3"
-					src="/search.png"
-					alt="Search"
+					@click="toggleSidebar"
+					class="md:hidden"
+					:src="showSidebar ? '/close.svg' : '/burger.svg'"
+					alt=""
 				/>
+
+				<img v-if="showInput" class="max-md:w-40" src="/logo.svg" alt="" />
 			</div>
-			<div class="flex gap-6 pl-10">
-				<div class="text-center">
-					<img class="w-5 h-5 mx-auto" src="/yurak.png" alt="Favorites" />
-					<p class="mt-1 text-xs font-semibold">Избранное</p>
+			<nuxt-link
+				to="/katalog"
+				class="bg-primary py-3 md:flex hidden px-7 rounded-full text-white gap-2"
+				><img src="/catalog.svg" alt="icon" />Каталог</nuxt-link
+			>
+			<form action="" class="relative md:block hidden">
+				<input
+					class="border py-3 rounded-full border-primary outline-none px-6 pr-12 w-[626px]"
+					type="text"
+					placeholder="Поиск по товарам"
+					name=""
+					id=""
+				/>
+				<img class="absolute right-5 top-4" src="/search.svg" alt="" />
+			</form>
+			<div class="flex items-center gap-8">
+				<div class="flex flex-col items-center">
+					<img src="/like.svg" alt="" />
+					<p class="md:block hidden">Избранное</p>
 				</div>
-				<div class="text-center">
-					<img class="w-5 h-5 mx-auto" src="/sravnaniya.png" alt="Comparison" />
-					<p class="mt-1 text-xs font-semibold">Сравнение</p>
+				<img v-if="showModal" src="/reyting.svg" alt="" />
+				<div class="md:flex hidden flex-col items-center">
+					<img v-if="showInput" src="/reyting.svg" alt="" />
+					<p>Сравнение</p>
 				</div>
-				<div class="text-center">
-					<img class="w-5 h-5 mx-auto" src="/korzinka.png" alt="Cart" />
-					<p class="mt-1 text-xs font-semibold">Корзина</p>
+				<div class="flex flex-col items-center">
+					<img src="/cart.svg" alt="" />
+					<p class="md:block hidden">Корзина</p>
 				</div>
 			</div>
 		</div>
-	</header>
+
+		<form action="" class="relative mt-5 block md:hidden">
+			<input
+				class="border py-3 rounded-full border-primary outline-none px-6 pr-12 w-[378px]"
+				type="text"
+				placeholder="Поиск по товарам"
+				name=""
+				id=""
+			/>
+			<img class="absolute right-5 top-4" src="/search.svg" alt="" />
+		</form>
+		<div v-if="showSidebar" @click="toggleSidebar" class="modal_mobile mt-10">
+			<div
+				class="justify-between py-3 text-sm z-50 fixed bg-white top-14 w-full"
+				v-if="showSidebar"
+			>
+				<nav>
+					<ul
+						class="flex flex-col items-center gap-7 text-primary/50 font-semibold border-t"
+					>
+						<li class="border-b py-4 w-full text-center">
+							<nuxt-link to="/">О компании</nuxt-link>
+						</li>
+						<li class="border-b py-4 w-full text-center">
+							<nuxt-link to="/">Доставка и оплата</nuxt-link>
+						</li>
+						<li class="border-b py-4 w-full text-center">
+							<nuxt-link to="/">Возврат</nuxt-link>
+						</li>
+						<li class="border-b py-4 w-full text-center">
+							<nuxt-link to="/">Гарантии</nuxt-link>
+						</li>
+						<li class="border-b py-4 w-full text-center">
+							<nuxt-link to="/">Контакты</nuxt-link>
+						</li>
+						<li class="border-b py-4 w-full text-center">
+							<nuxt-link to="/">Блог</nuxt-link>
+						</li>
+					</ul>
+				</nav>
+				<nuxt-link
+					to="/katalog"
+					class="bg-primary py-3 items-center px-40 mt-7 flex rounded-full text-white gap-2 w-[370px] mx-auto"
+					><img src="/catalog.svg" alt="icon" />Каталог</nuxt-link
+				>
+				<div class="flex flex-col items-center gap-3 mt-8">
+					<a class="text-primary text-sm" href="tel:+8 (800) 890-46-56"
+						>8 (800) 890-46-56</a
+					>
+					<button class="text-primary/50 font-semibold" @click="toggleModal">
+						Заказать звонок
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div v-if="showModal" class="modal-overlay" @click.self="toggleModal">
+		<PhoneModal @close="toggleModal" />
+	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+
+.modal_mobile {
+	position: fixed;
+	top: 2.5%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+</style>
