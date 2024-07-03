@@ -20,7 +20,12 @@ const props = defineProps({
 			<p class="text-sm font-bold line-through text-[20px] leading-6">
 				{{ props.data?.oldPrice }}
 			</p>
-			<p class="text-sm font-bold">{{ props.data?.newPrice }}</p>
+			<div class="flex justify-between items-center">
+				<p class="text-sm font-bold">{{ props.data?.newPrice }}</p>
+				<button class="bg-[#454545] py-3 px-4 rounded-lg">
+					<img src="/111.png" />
+				</button>
+			</div>
 		</div>
 	</div>
 </template>

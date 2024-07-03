@@ -12,13 +12,14 @@ useHead({
 </script>
 <template>
 	<!-- <NavbarHeader /> -->
-	<div>
+	<div class="">
 		<NavbarCarusel />
 		<NavbarKatalog />
 		<NavbarPochemu />
+		<NavbarSwipper />
 		<PopularProduct />
 		<div class="container"></div>
 	</div>
 </template>
 
-<style scoped></style>
+<style scopeds></style>

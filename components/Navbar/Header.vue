@@ -26,58 +26,62 @@ const myData = reactive([
 </script>
 
 <template>
-	<header>
-		<div class="flex container mb-8 justify-between">
-			<div class="py-4 flex items-center justify-between bg-[#FFFFFF]">
-				<div class="flex gap-x-8 text-[#454545]">
-					<div v-for="item in myData" :key="item.link">
-						<nuxt-link :to="item.link">{{ item.name }}</nuxt-link>
-					</div>
+	<header class="sticky top-0 z-50 bg-white shadow-md">
+		<div class="container mx-auto flex justify-between py-4">
+			<div class="flex items-center gap-x-8 text-gray-700">
+				<div v-for="item in myData" :key="item.link">
+					<nuxt-link :to="item.link" class="hover:text-gray-900">{{
+						item.name
+					}}</nuxt-link>
 				</div>
 			</div>
-			<div class="flex gap-3 items-center">
+			<div class="flex items-center gap-3">
 				<p class="cursor-pointer">8 (800) 890-46-56</p>
-				<button>Заказать звонок</button>
+				<button class="bg-blue-500 text-white px-4 py-2 rounded-full">
+					Заказать звонок
+				</button>
 			</div>
 		</div>
-		<div class="container flex gap-3 items-center">
-			<div class="flex items-center gap-[4px] pr-[30px]">
-				<img class="w-[27.44px] h-[27px]" src="/sun.png" />
-				<h2 class="text-[#454545] text-[29px] font-medium cursor-pointer">
+		<div class="container mx-auto flex gap-3 items-center py-4">
+			<div class="flex items-center gap-2 pr-6">
+				<img class="w-7 h-7" src="/sun.png" alt="Logo" />
+				<h2 class="text-gray-700 text-2xl font-medium cursor-pointer">
 					NORNLIGHT
 				</h2>
 			</div>
 			<button
-				class="flex bg-[#454545] text-[white] py-3 px-8 items-center gap-3 rounded-[100px]"
+				class="flex bg-gray-700 text-white py-2 px-6 items-center gap-2 rounded-full"
 			>
-				<img src="/gamburger.png" />
+				<img src="/gamburger.png" alt="Menu" />
 				<p>Каталог</p>
 			</button>
-
-			<div class="relative w-[50%]">
+			<div class="relative w-1/2">
 				<input
-					class="py-3 w-full rounded-[50px] border pl-5 outline-none"
+					class="py-2 w-full rounded-full border pl-5 pr-10 outline-none"
 					placeholder="Поиск по товарам"
 				/>
-				<img class="absolute top-1/2 -translate-y-1/2 right-5" src="/search.png" />
+				<img
+					class="absolute top-1/2 transform -translate-y-1/2 right-3"
+					src="/search.png"
+					alt="Search"
+				/>
 			</div>
-
-			<div class="flex gap-[22px] pl-[40px]">
-				<div class=" ">
-					<img class="w-5 h-[18px]" src="/yurak.png" />
-					<p class="mt-[6px] text-[12px] leading-3 font-semibold">Избранное</p>
+			<div class="flex gap-6 pl-10">
+				<div class="text-center">
+					<img class="w-5 h-5 mx-auto" src="/yurak.png" alt="Favorites" />
+					<p class="mt-1 text-xs font-semibold">Избранное</p>
 				</div>
-				<div class=" ">
-					<img class="w-5 h-[18px]" src="/sravnaniya.png" />
-					<p class="mt-[6px] text-[12px] leading-3 font-semibold">Сравнение</p>
+				<div class="text-center">
+					<img class="w-5 h-5 mx-auto" src="/sravnaniya.png" alt="Comparison" />
+					<p class="mt-1 text-xs font-semibold">Сравнение</p>
 				</div>
-				<div class=" ">
-					<img class="w-5 h-[18px]" src="/korzinka.png" />
-					<p class="mt-[6px] text-[12px] leading-3 font-semibold">Корзина</p>
+				<div class="text-center">
+					<img class="w-5 h-5 mx-auto" src="/korzinka.png" alt="Cart" />
+					<p class="mt-1 text-xs font-semibold">Корзина</p>
 				</div>
 			</div>
 		</div>
 	</header>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

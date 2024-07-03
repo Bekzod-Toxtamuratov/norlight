@@ -1,6 +1,15 @@
 <template>
 	<div class="">
-		<swiper :pagination="true" :modules="modules" class="mySwiper">
+		<swiper
+			:pagination="true"
+			:loop="true"
+			:autoplay="{
+				delay: 2500,
+				disableOnInteraction: false,
+			}"
+			:modules="modules"
+			class="mySwiper"
+		>
 			<swiper-slide><Intro /></swiper-slide>
 			<swiper-slide><Intro /></swiper-slide>
 			<swiper-slide><Intro /></swiper-slide>

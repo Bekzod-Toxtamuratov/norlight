@@ -1,5 +1,5 @@
 <template>
-	<div class="container mx-auto p-6">
+	<div class="container p-6">
 		<div class="mt-16">
 			<h2 class="text-2xl font-bold mb-6 text-center">Почему NORNLIGHT?</h2>
 			<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
