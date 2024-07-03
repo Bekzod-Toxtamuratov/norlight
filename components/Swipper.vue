@@ -22,13 +22,13 @@ const speedDown = () => {
 			>
 				Только проверенные бренды
 			</h2>
-			<div class="flex gap-2">
+			<div class="flex md:gap-2">
 				<i
-					class="bx bx-left-arrow-alt border px-4 text-xl"
+					class="bx bx-left-arrow-alt border px-2 md:px-4 text-xl"
 					@click="speedDown"
 				></i>
 				<i
-					class="bx bx-right-arrow-alt border px-4 text-xl"
+					class="bx bx-right-arrow-alt border px-2 md:px-4 text-xl"
 					@click="speedUp"
 				></i>
 			</div>
