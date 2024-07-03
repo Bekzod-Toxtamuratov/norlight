@@ -11,7 +11,12 @@ useHead({
 })
 </script>
 <template>
-	<div class="container"></div>
+	<!-- <NavbarHeader /> -->
+	<div>
+		<NavbarCarusel />
+		<NavbarKatalog />
+		<div class="container"></div>
+	</div>
 </template>
 
 <style scoped></style>

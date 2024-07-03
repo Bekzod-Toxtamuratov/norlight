@@ -54,11 +54,13 @@ const myData = reactive([
 				<p>Каталог</p>
 			</button>
 
-			<input
-				class="py-3 w-[50%] rounded-[50px] border pl-5 outline-none"
-				placeholder="Поиск по товарам"
-			/>
-			<img class="absolute" src="/search.png" />
+			<div class="relative w-[50%]">
+				<input
+					class="py-3 w-full rounded-[50px] border pl-5 outline-none"
+					placeholder="Поиск по товарам"
+				/>
+				<img class="absolute top-1/2 -translate-y-1/2 right-5" src="/search.png" />
+			</div>
 
 			<div class="flex gap-[22px] pl-[40px]">
 				<div class=" ">
