@@ -1,5 +1,5 @@
 <template>
-	<div>All product page</div>
+	<PopularProduct class="my-[120px]" />
 </template>
 
 <script setup></script>

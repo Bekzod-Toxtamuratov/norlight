@@ -13,6 +13,7 @@ export default {
 		extend: {
 			colors: {
 				primary: '#454545',
+				kulrang: '#F2F2F2',
 			},
 		},
 	},

@@ -5,6 +5,7 @@
 		<div>
 			<slot />
 		</div>
+		<Footer />
 	</main>
 </template>
 <style lang="scss" scoped></style>
