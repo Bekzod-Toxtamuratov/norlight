@@ -17,7 +17,9 @@ const speedDown = () => {
 <template>
 	<div class="container py-5">
 		<div class="flex justify-between cursor-pointer group py-6">
-			<h2 class="text-[#454545] text-3xl font-bold">
+			<h2
+				class="text-[#454545] text-[18px] max-md:w-[328px] leading-[38px] md:text-3xl font-bold"
+			>
 				Только проверенные бренды
 			</h2>
 			<div class="flex gap-2">
