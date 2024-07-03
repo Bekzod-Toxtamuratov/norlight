@@ -10,7 +10,11 @@ export default {
 				'2xl': '1332px',
 			},
 		},
-		extend: {},
+		extend: {
+			colors: {
+				primary: '#454545',
+			},
+		},
 	},
 	plugins: [],
 }

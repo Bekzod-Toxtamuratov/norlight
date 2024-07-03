@@ -2,18 +2,15 @@
 const showModal = ref(false)
 const showInput = ref(true)
 const showSidebar = ref(false)
-
 const toggleModal = () => {
 	showModal.value = !showModal.value
 	showInput.value = !showInput.value
 }
-
 const toggleSidebar = () => {
 	showSidebar.value = !showSidebar.value
 	showInput.value = !showInput.value
 }
 </script>
-
 <template>
 	<div class="container md:mb-16">
 		<div class="md:flex hidden items-center justify-between py-3 text-sm">
