@@ -9,7 +9,7 @@ const props = defineProps({
 			<img
 				:src="props.data?.image"
 				alt="image"
-				class="w-full md:w-[80%] h-[216px] object-cover md:pl-6 rounded mb-2"
+				class="w-full md:w-[80%] h-[160px] md:h-[216px] object-cover md:pl-6 rounded mb-2"
 			/>
 			<img class="max-md:hidden md:w-[20px] md:h-[19px]" src="/200.png" />
 		</div>
