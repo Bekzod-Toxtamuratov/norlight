@@ -2,11 +2,10 @@
 export default {
 	content: [],
 	theme: {
-		extend: {},
 		container: {
 			center: true,
 			padding: '16px',
-			screes: {
+			screens: {
 				xl: '1332px',
 				'2xl': '1332px',
 			},
