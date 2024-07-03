@@ -15,6 +15,7 @@ useHead({
 	<div>
 		<NavbarCarusel />
 		<NavbarKatalog />
+		<NavbarPochemu />
 		<div class="container"></div>
 	</div>
 </template>
