@@ -5,12 +5,16 @@ const props = defineProps({
 </script>
 
 <template>
-	<div class="card px-3 py-[100px] bg-white shadow-lg rounded-md">
-		<img
-			:src="props.data?.image"
-			alt="image"
-			class="w-[173px] h-[216px] object-cover pl-6 rounded mb-2"
-		/>
+	<div class="card px-3 py-[30px] bg-white shadow-lg rounded-md">
+		<div class="flex justify-between px-2">
+			<img
+				:src="props.data?.image"
+				alt="image"
+				class="w-[80%] h-[216px] object-cover pl-6 rounded mb-2"
+			/>
+			<img class="w-[20px] h-[19px]" src="/200.png" />
+		</div>
+
 		<div class="flex flex-col gap-5 pl-6">
 			<h2 class="text-xl max-w-[227px]">Card title: {{ props.data?.title }}</h2>
 			<p class="text-sm font-bold line-through text-[20px] leading-6">
