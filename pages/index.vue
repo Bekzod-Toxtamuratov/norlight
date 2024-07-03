@@ -13,11 +13,11 @@ useHead({
 <template>
 	<!-- <NavbarHeader /> -->
 	<div class="">
-		<NavbarCarusel />
-		<NavbarKatalog />
-		<NavbarPochemu />
-		<PopularProduct />
-		<NavbarSwipper />
+		<Carusel />
+		<Katalog />
+		<Pochemu />
+		<Product />
+		<Swipper />
 		<div class="container"></div>
 	</div>
 </template>
