@@ -1,4 +1,5 @@
 <script setup>
+import BlogProduct from '../components/BlogProduct.vue'
 import PopularProduct from '../components/PopularProduct.vue'
 
 // definePageMeta({
@@ -18,8 +19,9 @@ useHead({
 		<Carusel />
 		<Katalog />
 		<Pochemu />
-		<PopularProduct />	
+		<PopularProduct />
 		<Swipper />
+		<BlogProduct />
 		<div class="container"></div>
 	</div>
 </template>

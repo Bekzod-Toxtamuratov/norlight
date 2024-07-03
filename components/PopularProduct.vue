@@ -6,7 +6,6 @@ useHead({
 		rel: 'stylesheet',
 	},
 })
-
 const products = ref(null)
 const loading = ref(false)
 const getProducts = async () => {
@@ -25,9 +24,9 @@ getProducts()
 		<div class="grid-cols-2 grid md:grid-cols-4 gap-4">
 			<ProductCard v-for="item in products" :key="item?.id" :data="item" />
 		</div>
-		<div class="md:hidden">
+		<div class="md:hidden flex items-center justify-center">
 			<button
-				class="max-md:mt-5 max-md:w-full flex items-center gap-3 text-[16px] border border-[#454545] py-3 max-md:pl-[150px] md:px-[45px] bg-[#FFFFFF] rounded-[100px]"
+				class="max-md:mt-5 max-md:w-full flex items-center gap-3 text-[16px] border border-[#454545] py-3 max-md:pl-[120px] bg-[#FFFFFF] rounded-[100px]"
 			>
 				Весь каталог
 				<img class="w-[14px] h-[10px]" src="/1.png" />
