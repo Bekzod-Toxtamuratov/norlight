@@ -22,6 +22,7 @@ useHead({
 		<PopularProduct />
 		<Swipper />
 		<BlogProduct />
+		<Footer />
 		<div class="container"></div>
 	</div>
 </template>
