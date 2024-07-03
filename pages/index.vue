@@ -1,4 +1,6 @@
 <script setup>
+import PopularProduct from '../components/PopularProduct.vue'
+
 // definePageMeta({
 // 	layout: 'user',
 // })
@@ -16,7 +18,7 @@ useHead({
 		<Carusel />
 		<Katalog />
 		<Pochemu />
-		<Product />
+		<PopularProduct />	
 		<Swipper />
 		<div class="container"></div>
 	</div>

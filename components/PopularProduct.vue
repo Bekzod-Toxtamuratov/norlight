@@ -14,7 +14,6 @@ const getProducts = async () => {
 	const { data, pending, error, refresh } = await useFetch(
 		'https://6684d16356e7503d1ae140ec.mockapi.io/products'
 	)
-	// console.log(data._rawValue);
 	products.value = data._rawValue
 	loading.value = false
 }
@@ -25,6 +24,14 @@ getProducts()
 		<div class="loading" v-if="loading">Loading ...</div>
 		<div class="grid-cols-2 grid md:grid-cols-4 gap-4">
 			<ProductCard v-for="item in products" :key="item?.id" :data="item" />
+		</div>
+		<div class="md:hidden">
+			<button
+				class="max-md:mt-5 max-md:w-full flex items-center gap-3 text-[16px] border border-[#454545] py-3 max-md:pl-[150px] md:px-[50px] bg-[#FFFFFF] rounded-[100px]"
+			>
+				Весь каталог
+				<img class="w-[14px] h-[10px]" src="/1.png" />
+			</button>
 		</div>
 	</div>
 </template>
