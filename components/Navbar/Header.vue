@@ -115,7 +115,7 @@ const toggleSidebar = () => {
 							<nuxt-link to="/Contacts">Контакты</nuxt-link>
 						</li>
 						<li class="border-b py-4 w-full text-center">
-							<nuxt-link to="/">Блог</nuxt-link>
+							<nuxt-link to="/Blog">Блог</nuxt-link>
 						</li>
 					</ul>
 				</nav>
