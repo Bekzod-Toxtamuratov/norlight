@@ -103,7 +103,7 @@ const toggleSidebar = () => {
 							<nuxt-link to="/about">О компании</nuxt-link>
 						</li>
 						<li class="border-b py-4 w-full text-center">
-							<nuxt-link to="/shippinng">Доставка и оплата</nuxt-link>
+							<nuxt-link to="/shipping">Доставка и оплата</nuxt-link>
 						</li>
 						<li class="border-b py-4 w-full text-center">
 							<nuxt-link to="/Return">Возврат</nuxt-link>
