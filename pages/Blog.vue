@@ -1,6 +1,9 @@
 <template>
-	<Shipping class="mb-[116px]" />
+	<div>
+		<BlogProduct class="mb-[60px]" />
+	</div>
 </template>
+
 <script setup></script>
 
 <style lang="scss" scoped></style>

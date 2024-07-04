@@ -21,7 +21,7 @@ const toggleSidebar = () => {
 					<li><nuxt-link to="/Return">Возврат</nuxt-link></li>
 					<li><nuxt-link to="/Garant">Гарантии</nuxt-link></li>
 					<li><nuxt-link to="/Contacts">Контакты</nuxt-link></li>
-					<li><nuxt-link to="">Блог</nuxt-link></li>
+					<li><nuxt-link to="/Blog">Блог</nuxt-link></li>
 				</ul>
 			</nav>
 			<div class="flex gap-6">
@@ -99,12 +99,6 @@ const toggleSidebar = () => {
 					<ul
 						class="flex flex-col items-center gap-7 text-primary/50 font-semibold border-t"
 					>
-						<!-- <li><nuxt-link to="/about">О компании</nuxt-link></li>
-					<li><nuxt-link to="/shipping">Доставка и оплата</nuxt-link></li>
-					<li><nuxt-link to="/Return">Возврат</nuxt-link></li>
-					<li><nuxt-link to="/Garant">Гарантии</nuxt-link></li>
-					<li><nuxt-link to="/Contacts">Контакты</nuxt-link></li>
-					<li><nuxt-link to="">Блог</nuxt-link></li> -->
 						<li class="border-b py-4 w-full text-center">
 							<nuxt-link to="/about">О компании</nuxt-link>
 						</li>
