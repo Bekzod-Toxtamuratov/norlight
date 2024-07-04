@@ -45,7 +45,7 @@ const toggleSidebar = () => {
 				<img v-if="showInput" class="max-md:w-40" src="/logo.svg" alt="" />
 			</div>
 			<nuxt-link
-				to="/katalog"
+				to="/"
 				class="bg-primary py-3 md:flex hidden px-7 rounded-full text-white gap-2"
 				><img src="/catalog.svg" alt="icon" />Каталог</nuxt-link
 			>

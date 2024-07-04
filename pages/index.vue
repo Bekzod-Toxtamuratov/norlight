@@ -1,7 +1,4 @@
 <script setup>
-import BlogProduct from '../components/BlogProduct.vue'
-import PopularProduct from '../components/PopularProduct.vue'
-
 // definePageMeta({
 // 	layout: 'user',
 // })
@@ -23,7 +20,7 @@ useHead({
 		<Swipper />
 		<BlogProduct />
 		<Manufacturing class="mt-[100px]" />
-		<products />
+		<!-- <products /> -->
 	</div>
 </template>
 

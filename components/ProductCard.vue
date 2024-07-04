@@ -33,16 +33,13 @@ const props = defineProps({
 
 		<div class="flex flex-col gap-1 md:gap-5 pl-6">
 			<h2 class="text-[16px] md:text-xl max-w-[118px] md:max-w-[227px]">
-				Card title: {{ props.data?.title }}
+				{{ data?.title }}
 			</h2>
 			<p class="text-sm line-through text-[20px] leading-6">
 				{{ props.data?.oldPrice }}
 			</p>
 			<div class="flex justify-between items-center">
-				<p class="text-sm font-bold">{{ props.data?.newPrice }}</p>
-				<button class="bg-[#454545] py-2 md:py-3 px-3 md:px-5 rounded-[100px]">
-					<img src="/111.png" />
-				</button>
+				<p class="text-sm font-bold">{{ data?.newPrice }}</p>
 			</div>
 		</div>
 	</div>
