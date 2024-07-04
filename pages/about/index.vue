@@ -6,5 +6,4 @@
 		<BlogProduct class="mb-[127px]" />
 	</div>
 </template>
-
 <style lang="scss" scoped></style>
