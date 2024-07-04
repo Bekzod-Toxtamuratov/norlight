@@ -42,7 +42,9 @@ const toggleSidebar = () => {
 					alt=""
 				/>
 
-				<img v-if="showInput" class="max-md:w-40" src="/logo.svg" alt="" />
+				<nuxt-link to="/">
+					<img v-if="showInput" class="max-md:w-40" src="/logo.svg" alt="" />
+				</nuxt-link>
 			</div>
 			<nuxt-link
 				to="/"

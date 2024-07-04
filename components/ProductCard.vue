@@ -1,6 +1,16 @@
 <script setup>
+import { computed } from 'vue'
+import { usePiniaStore } from '../store'
+const store = usePiniaStore()
 const props = defineProps({
 	data: Object,
+})
+const toogleLike = () => {
+	store.addProductToLiked(props.data)
+}
+const isLiked = computed(() => {
+	const index = store.likedProducts.findIndex(p => p.id == props.data.id)
+	return index == -1
 })
 </script>
 <template>
@@ -13,7 +23,6 @@ const props = defineProps({
 					class="w-full md:w-[80%] h-[126px] md:h-[216px] object-cover md:pl-6 rounded mb-2"
 				/>
 			</nuxt-link>
-
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="1em"
@@ -30,7 +39,6 @@ const props = defineProps({
 				/>
 			</svg>
 		</div>
-
 		<div class="flex flex-col gap-1 md:gap-5 pl-6">
 			<h2 class="text-[16px] md:text-xl max-w-[118px] md:max-w-[227px]">
 				{{ data?.title }}
@@ -41,8 +49,12 @@ const props = defineProps({
 			<div class="flex justify-between items-center">
 				<p class="text-sm font-bold">{{ data?.newPrice }}</p>
 			</div>
+			<button class="py-3 px-4" @click="toogleLike">
+				<Icon v-if="isLiked" name="weui:like-outlined" color="black" />
+				<Icon v-else name="flat-color-icons:like" color="black" />
+				<!-- <Icon name="uil:github" color="black" /> -->
+			</button>
 		</div>
 	</div>
 </template>
-
 <style scoped></style>

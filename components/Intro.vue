@@ -3,9 +3,9 @@
 		<div
 			class="md:flex flex max-md:flex-col text-center gap-10 items-center md:justify-between py-8"
 		>
-			<div>
+			<div class="flex flex-col pl-[50px]">
 				<h1
-					class="text-[28px] leading-[38px] md:text-[64px] md:leading-[87px] font-bold max-w-[257px] md:max-w-[588px]"
+					class="text-[28px] leading-[38px] md:text-[64px] md:leading-[87px] text-left font-bold max-w-[257px] md:max-w-[588px]"
 				>
 					Скидка 15% на все подвесные светильники
 				</h1>

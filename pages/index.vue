@@ -20,7 +20,6 @@ useHead({
 		<Swipper />
 		<BlogProduct />
 		<Manufacturing class="mt-[100px]" />
-		<!-- <products /> -->
 	</div>
 </template>
 
