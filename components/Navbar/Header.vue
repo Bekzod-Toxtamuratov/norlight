@@ -16,9 +16,9 @@ const toggleSidebar = () => {
 		<div class="md:flex hidden items-center justify-between py-3 text-sm">
 			<nav>
 				<ul class="flex gap-7 text-primary/50 font-semibold">
-					<li><nuxt-link to="">О компании</nuxt-link></li>
-					<li><nuxt-link to="">Доставка и оплата</nuxt-link></li>
-					<li><nuxt-link to="">Возврат</nuxt-link></li>
+					<li><nuxt-link to="/about">О компании</nuxt-link></li>
+					<li><nuxt-link to="/shipping">Доставка и оплата</nuxt-link></li>
+					<li><nuxt-link to="/Return">Возврат</nuxt-link></li>
 					<li><nuxt-link to="">Гарантии</nuxt-link></li>
 					<li><nuxt-link to="">Контакты</nuxt-link></li>
 					<li><nuxt-link to="">Блог</nuxt-link></li>

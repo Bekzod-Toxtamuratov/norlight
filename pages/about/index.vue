@@ -1,5 +1,4 @@
 <script setup></script>
-
 <template>
 	<div>
 		<About class="mb-[100px]" />
