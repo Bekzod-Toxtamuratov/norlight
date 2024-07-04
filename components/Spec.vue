@@ -3,13 +3,11 @@
 		<h2 class="text-3xl font-semibold mb-6">Характеристика</h2>
 		<div class="bg-white shadow rounded-lg overflow-hidden">
 			<div class="divide-y divide-gray-200">
-				<!-- Row 1 -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4">
 					<div class="font-semibold text-gray-600">Цвет</div>
 					<div>Жёлтый</div>
 				</div>
 
-				<!-- Row 2 -->
 				<div
 					class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4 bg-gray-100"
 				>
@@ -17,13 +15,11 @@
 					<div>2016</div>
 				</div>
 
-				<!-- Row 3 -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4">
 					<div class="font-semibold text-gray-600">Диаметр колеса</div>
 					<div>27.5</div>
 				</div>
 
-				<!-- Row 4 -->
 				<div
 					class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4 bg-gray-100"
 				>
@@ -31,13 +27,11 @@
 					<div>Карбон</div>
 				</div>
 
-				<!-- Row 5 -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4">
 					<div class="font-semibold text-gray-600">Размер</div>
 					<div>L</div>
 				</div>
 
-				<!-- Row 6 -->
 				<div
 					class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4 bg-gray-100"
 				>
@@ -45,13 +39,11 @@
 					<div>Швейцария</div>
 				</div>
 
-				<!-- Row 7 -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4">
 					<div class="font-semibold text-gray-600">Производитель</div>
 					<div>Scott</div>
 				</div>
 
-				<!-- Row 8 -->
 				<div
 					class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4 bg-gray-100"
 				>
@@ -62,7 +54,6 @@
 					</div>
 				</div>
 
-				<!-- Row 9 -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4">
 					<div class="font-semibold text-gray-600">Рама</div>
 					<div>
@@ -71,7 +62,6 @@
 					</div>
 				</div>
 
-				<!-- Row 10 -->
 				<div
 					class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4 bg-gray-100"
 				>
@@ -82,13 +72,10 @@
 					</div>
 				</div>
 
-				<!-- Row 11 -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4">
 					<div class="font-semibold text-gray-600">Седло</div>
 					<div>Ritchey WCS Streem V3 Titanium rails</div>
 				</div>
-
-				<!-- Row 12 -->
 				<div
 					class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 p-4 bg-gray-100"
 				>
@@ -103,10 +90,5 @@
 		</div>
 	</div>
 </template>
-<script setup>
-// No additional script needed for this simple component
-</script>
-
-<style scoped>
-/* Add any custom styles here if needed */
-</style>
+<script setup></script>
+<style scoped></style>

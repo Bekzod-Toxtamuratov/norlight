@@ -103,9 +103,11 @@
 				<div class="space-y-2">
 					<h4 class="font-semibold">Товары</h4>
 					<ul class="space-y-1">
-						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700">Люстры</a>
-						</li>
+						<nuxt-link to="/products">
+							<li>
+								<a href="#" class="text-gray-500 hover:text-gray-700">Люстры</a>
+							</li>
+						</nuxt-link>
 						<li>
 							<a href="#" class="text-gray-500 hover:text-gray-700"
 								>Светильники</a
