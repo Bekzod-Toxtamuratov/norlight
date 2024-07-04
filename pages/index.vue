@@ -14,7 +14,7 @@ useHead({
 	<!-- <NavbarHeader /> -->
 	<div class="">
 		<Carusel />
-		<Katalog />
+		<Katalog />  
 		<Pochemu />
 		<PopularProduct />
 		<Swipper />

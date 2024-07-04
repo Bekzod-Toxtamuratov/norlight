@@ -1,6 +1,8 @@
 <template>
 	<div class="container">
-		<h1 class="text-[64px] font-bold leading-[71px] my-[30px]">
+		<h1
+			class="text-[28px] leading-[38px] md:text-[64px] font-bold md:leading-[71px] my-[30px]"
+		>
 			Избранные товары
 		</h1>
 		<div class="grid-cols-4 grid md:grid-cols mb-[100px] gap-2">

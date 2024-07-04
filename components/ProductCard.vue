@@ -28,12 +28,12 @@ const isLiked = computed(() => {
 					v-if="isLiked"
 					name="weui:like-outlined"
 					color="black"
-					class="text-2xl"
+					class="text-xl md:text-2xl"
 				/>
 				<Icon
 					v-else
 					name="flat-color-icons:like"
-					class="text-2xl"
+					class="text-xl md:text-2xl"
 					color="black"
 				/>
 			</button>

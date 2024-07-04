@@ -47,7 +47,7 @@ const toggleSidebar = () => {
 				</nuxt-link>
 			</div>
 			<nuxt-link
-				to="/"
+				to="/Katalog"
 				class="bg-primary py-3 md:flex hidden px-7 rounded-full text-white gap-2"
 				><img src="/catalog.svg" alt="icon" />Каталог</nuxt-link
 			>
@@ -120,7 +120,7 @@ const toggleSidebar = () => {
 					</ul>
 				</nav>
 				<nuxt-link
-					to="/katalog"
+					to="/Katalog"
 					class="bg-primary py-3 items-center px-40 mt-7 flex rounded-full text-white gap-2 w-[370px] mx-auto"
 					><img src="/catalog.svg" alt="icon" />Каталог</nuxt-link
 				>

@@ -57,6 +57,8 @@
 				</p>
 			</div>
 		</div>
+		<Swipper class="mb-[100px]" />
+		<BlogProduct class="mb-[127px]" />
 	</div>
 </template>
 <script setup></script>

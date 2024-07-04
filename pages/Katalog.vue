@@ -1,5 +1,5 @@
 <template>
-	<div class="container mt-[100px]">
+	<div class="container my-[100px]">
 		<div class="md:flex justify-between">
 			<h2 class="text-[#454545] font-bold text-[28px] md:text-[40px] leading-8">
 				Каталог
