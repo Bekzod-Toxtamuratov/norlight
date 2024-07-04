@@ -23,7 +23,7 @@ useHead({
 		<Swipper />
 		<BlogProduct />
 		<Manufacturing class="mt-[100px]" />
-		<Footer />
+		<products />
 	</div>
 </template>
 

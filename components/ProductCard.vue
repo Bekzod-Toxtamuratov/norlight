@@ -6,11 +6,14 @@ const props = defineProps({
 <template>
 	<div class="card px-3 py-[30px] bg-white shadow-lg rounded-md">
 		<div class="flex justify-between px-2">
-			<img
-				:src="props.data?.image"
-				alt="image"
-				class="w-full md:w-[80%] h-[126px] md:h-[216px] object-cover md:pl-6 rounded mb-2"
-			/>
+			<nuxt-link :to="'/products/' + props.data?.id">
+				<img
+					:src="props.data?.image"
+					alt="image"
+					class="w-full md:w-[80%] h-[126px] md:h-[216px] object-cover md:pl-6 rounded mb-2"
+				/>
+			</nuxt-link>
+
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="1em"
