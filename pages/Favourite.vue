@@ -1,7 +1,9 @@
 <template>
 	<div class="container">
-		<h1>Favourites</h1>
-		<div class="grid-cols-2 grid md:grid-cols gap-2">
+		<h1 class="text-[64px] font-bold leading-[71px] my-[30px]">
+			Избранные товары
+		</h1>
+		<div class="grid-cols-4 grid md:grid-cols mb-[100px] gap-2">
 			<ProductCard
 				v-for="item in store.likedProducts"
 				:data="item"

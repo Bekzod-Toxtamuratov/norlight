@@ -62,10 +62,12 @@ const toggleSidebar = () => {
 				<img class="absolute right-5 top-4" src="/search.svg" alt="" />
 			</form>
 			<div class="flex items-center gap-8">
-				<div class="flex flex-col items-center">
-					<img src="/like.svg" alt="" />
-					<p class="md:block hidden">Избранное</p>
-				</div>
+				<nuxt-link to="/Favourite">
+					<div class="flex flex-col items-center">
+						<img src="/like.svg" alt="" />
+						<p class="md:block hidden">Избранное</p>
+					</div>
+				</nuxt-link>
 				<img v-if="showModal" src="/reyting.svg" alt="" />
 				<div class="md:flex hidden flex-col items-center">
 					<img v-if="showInput" src="/reyting.svg" alt="" />
@@ -132,9 +134,9 @@ const toggleSidebar = () => {
 				</div>
 			</div>
 		</div>
-	</div>
-	<div v-if="showModal" class="modal-overlay" @click.self="toggleModal">
-		<PhoneModal @close="toggleModal" />
+		<div v-if="showModal" class="modal-overlay" @click.self="toggleModal">
+			<PhoneModal @close="toggleModal" />
+		</div>
 	</div>
 </template>
 
