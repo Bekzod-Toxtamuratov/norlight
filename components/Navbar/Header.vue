@@ -19,8 +19,8 @@ const toggleSidebar = () => {
 					<li><nuxt-link to="/about">О компании</nuxt-link></li>
 					<li><nuxt-link to="/shipping">Доставка и оплата</nuxt-link></li>
 					<li><nuxt-link to="/Return">Возврат</nuxt-link></li>
-					<li><nuxt-link to="">Гарантии</nuxt-link></li>
-					<li><nuxt-link to="">Контакты</nuxt-link></li>
+					<li><nuxt-link to="/Garant">Гарантии</nuxt-link></li>
+					<li><nuxt-link to="/Contacts">Контакты</nuxt-link></li>
 					<li><nuxt-link to="">Блог</nuxt-link></li>
 				</ul>
 			</nav>
