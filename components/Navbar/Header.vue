@@ -72,6 +72,7 @@ const store = usePiniaStore()
 							<img class="" src="/like.svg" alt="" />
 						</div>
 						<div
+							v-if="store.likedProducts.length != 0"
 							class="bg-[#C63C3C] absolute top-[-19px] right-[12px] rounded-full py-[2px] px-[10px] text-white"
 						>
 							{{ store.likedProducts.length }}
@@ -91,6 +92,7 @@ const store = usePiniaStore()
 						</div>
 					</nuxt-link>
 					<div
+						v-if="store.basket.length != 0"
 						class="bg-[#C63C3C] absolute top-[-15px] right-[1px] rounded-full py-[2px] px-[10px] text-white"
 					>
 						{{ store.basket.length }}

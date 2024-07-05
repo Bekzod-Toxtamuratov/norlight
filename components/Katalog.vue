@@ -4,12 +4,14 @@
 			<h2 class="text-[#454545] font-bold text-[28px] md:text-[40px] leading-8">
 				Каталог
 			</h2>
-			<button
-				class="max-md:mt-5 max-md:w-full flex items-center gap-3 md:text-[16px] text-[8px] border border-[#454545] py-3 max-md:pl-[150px] md:px-[50px] bg-[#FFFFFF] rounded-[100px]"
-			>
-				Весь каталог
-				<img class="w-[14px] h-[10px]" src="/1.png" />
-			</button>
+			<nuxt-link to="/Katalog">
+				<button
+					class="max-md:mt-5 max-md:w-full flex items-center gap-3 md:text-[16px] text-[8px] border border-[#454545] py-3 max-md:pl-[150px] md:px-[50px] bg-[#FFFFFF] rounded-[100px]"
+				>
+					Весь каталог
+					<img class="w-[14px] h-[10px]" src="/1.png" />
+				</button>
+			</nuxt-link>
 		</div>
 		<div class="box grid grid-cols-2 md:grid-cols-3 gap-8 mt-10">
 			<div v-for="item in myData" :key="item.title">

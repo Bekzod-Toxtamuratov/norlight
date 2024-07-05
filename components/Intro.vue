@@ -1,7 +1,7 @@
 <template>
-	<div class="container bg-[#F2F2F2] mt-8 rounded-[50px]">
+	<div class="container bg-[#F2F2F2] mt-8 rounded-[30px] md:rounded-[50px]">
 		<div
-			class="md:flex flex max-md:flex-col text-center gap-10 items-center md:justify-between py-8"
+			class="md:flex flex max-md:flex-col-reverse text-center gap-10 items-center md:justify-between py-8"
 		>
 			<div class="flex flex-col pl-[50px]">
 				<h1
@@ -19,7 +19,7 @@
 			<div class="py-2">
 				<img
 					class="w-[300px] h-[300px] md:w-[453px] md:h-[453px]"
-					src="/lamp.png"
+					src="/lamp.webp"
 				/>
 			</div>
 		</div>
