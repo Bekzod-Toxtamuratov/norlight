@@ -51,7 +51,7 @@ const store = usePiniaStore()
 				</nuxt-link>
 			</div>
 			<nuxt-link
-				to="/Katalog"
+				to="/katalog"
 				class="bg-primary py-3 md:flex hidden px-7 rounded-full text-white gap-2"
 				><img src="/catalog.svg" alt="icon" />Каталог</nuxt-link
 			>

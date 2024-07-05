@@ -1,8 +1,9 @@
 <template>
 	<div>
-		<Katalog />
+		<CatalogPage />
 		<Swipper />
 		<BlogProduct />
+		<Manufacturing class="mt-20" />
 	</div>
 </template>
 

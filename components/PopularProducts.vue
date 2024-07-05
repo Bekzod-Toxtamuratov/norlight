@@ -2,7 +2,6 @@
 const { data: products } = await useFetch(
 	'https://6684d16356e7503d1ae140ec.mockapi.io/products'
 )
-
 </script>
 
 <template>
@@ -16,7 +15,7 @@ const { data: products } = await useFetch(
 					<button
 						class="max-md:hidden border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3 hover:bg-[#FF58065B] hover:text-white"
 					>
-						Весь каталог
+						Все товары
 						<svg
 							width="15"
 							height="12"

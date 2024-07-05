@@ -2,7 +2,7 @@
 	<div class="container mx-auto p-5">
 		<div class="flex flex-col lg:flex-row">
 			<div class="lg:w-1/2">
-				<h1 class="text-4xl font-bold">Блог</h1>
+				<h1 class="text-[40px] font-bold">Блог</h1>
 			</div>
 
 			<div class="lg:w-1/2 lg:pl-5 mt-5 lg:mt-0 pb-10">

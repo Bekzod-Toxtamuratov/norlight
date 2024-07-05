@@ -14,6 +14,7 @@ export default {
 			colors: {
 				primary: '#454545',
 				kulrang: '#F2F2F2',
+				changeHover: '#FF58065B',
 			},
 		},
 	},

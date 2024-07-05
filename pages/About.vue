@@ -10,33 +10,39 @@
 				</h1>
 				<div class="bg-kulrang py-6 md:py-8 px-8 rounded-[15px]">
 					<h2 class="text-[64px] leading-7 mb-[83px]">170+</h2>
-					<h2 class="text-[24px]">Товаров</h2>
+					<h2 class="tex-[14px] md:text-[24px]">Товаров</h2>
 				</div>
 				<div class="bg-kulrang py-6 md:py-8 px-3 md:px-8 rounded-[15px]">
 					<h2 class="text-[64px] py-6 md:py-8 mb-[83px]">100 +</h2>
-					<h2 class="text-[24px]">Довольных покупателей</h2>
+					<h2 class="text-[14px] md:text-[24px]">Довольных покупателей</h2>
 				</div>
 				<div class="bg-kulrang py-6 md:py-8 px-8 rounded-[15px]">
 					<h2 class="text-[64px] leading-7 mb-[83px]">170+</h2>
-					<h2 class="text-[24px]">Товаров</h2>
+					<h2 class="text-[14px] md:text-[24px]">Товаров</h2>
 				</div>
 			</div>
 			<div class="max-md:mt-5 md:w-[55%]">
-				<p class="md:text-[20px] leading-7 font-normal mb-3">
+				<p
+					class="md:text-[20px] text-[16px] leading-6 md:leading-7 font-normal mb-3"
+				>
 					Интернет-магазин NORNLIGHT предлагает широкий ассортимент светильников
 					для освещения вашего дома или офиса. У нас вы найдете разнообразные
 					модели светильников, от современных и стильных до классических и
 					элегантных. Мы предлагаем качественные и надежные светильники от
 					лучших производителей, которые подарят вам комфорт и уют.
 				</p>
-				<p class="md:text-[20px] leading-7 font-normal mb-3">
+				<p
+					class="md:text-[20px] text-[16px] leading-6 md:leading-7 font-normal mb-3"
+				>
 					Покупая светильники в нашем интернет-магазине, вы получаете отличное
 					соотношение цены и качества. Мы осуществляем доставку по всей России,
 					чтобы каждый клиент мог насладиться прекрасным светом и удобством
 					покупки онлайн. Обратитесь к нам сегодня и превратите ваш дом в оазис
 					тепла и света с NORNLIGHT!
 				</p>
-				<p class="md:text-[20px] leading-7 font-normal mb-3">
+				<p
+					class="md:text-[20px] text-[16px] leading-6 md:leading-7 font-normal mb-3"
+				>
 					Покупая светильники в нашем интернет-магазине, вы получаете отличное
 					соотношение цены и качества. Мы осуществляем доставку по всей России,
 					чтобы каждый клиент мог насладиться прекрасным светом и удобством
@@ -48,7 +54,9 @@
 					надежные светильники от лучших производителей, которые подарят вам
 					комфорт и уют.
 				</p>
-				<p class="text-[20px] leading-7 font-normal mb-3">
+				<p
+					class="md:text-[20px] text-[16px] leading-6 md:leading-7 font-normal mb-3"
+				>
 					Покупая светильники в нашем интернет-магазине, вы получаете отличное
 					соотношение цены и качества. Мы осуществляем доставку по всей России,
 					чтобы каждый клиент мог насладиться прекрасным светом и удобством
