@@ -15,12 +15,10 @@ const isLiked = computed(() => {
 	const index = store.likedProducts.findIndex(p => p.id == props.data.id)
 	return index == -1
 })
-
-// const isDeleted = computed(() => {
-//       const index = store.basket.findIndex(p => p.id == props.data.id)
-//      return index == -1
-
-// })
+const isInKorzina = computed(() => {
+	const index = store.basket.findIndex(p => p.id == props.data.id)
+	return index == -1
+})
 </script>
 <template>
 	<div class="bg-white">
@@ -60,17 +58,29 @@ const isLiked = computed(() => {
 					@click="toogleDelte"
 					class="bg-[#454545] py-[5px] px-[15px] rounded-[100px]"
 				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="2em"
-						height="30px"
-						viewBox="0 0 16 16"
-					>
-						<path
-							fill="currentColor"
-							d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607L1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4a2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2a1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2"
-						/>
-					</svg>
+					<div class="py-3">
+						<button
+							@click="toggleBasket"
+							class="bg-[#454545] px-[3px] rounded-2xl py-[3px]"
+						>
+							<Icon
+								v-if="isInKorzina"
+								name="vaadin:cart-o"
+								width="24"
+								height="24"
+								style="color: white"
+								class="text-2xl"
+							/>
+							<Icon
+								v-else
+								name="material-symbols:delete-outline"
+								width="24"
+								height="24"
+								style="color: white"
+								class="text-2xl"
+							/>
+						</button>
+					</div>
 				</button>
 			</div>
 		</div>

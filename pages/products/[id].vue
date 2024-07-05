@@ -58,9 +58,22 @@
 						В корзину
 					</button>
 					<button
+						@click="toogleLike"
 						class="border border-gray-300 rounded-lg py-2 px-4 hover:bg-gray-200"
 					>
-						<img src="/images/heart.png" alt="" />
+						<!-- <img src="/images/heart.png" alt="" /> -->
+						<Icon
+							v-if="isLiked"
+							name="weui:like-outlined"
+							color="black"
+							class="text-xl md:text-2xl"
+						/>
+						<Icon
+							v-else
+							name="flat-color-icons:like"
+							class="text-xl md:text-2xl"
+							color="black"
+						/>
 					</button>
 				</div>
 			</div>
@@ -76,12 +89,21 @@ import { useRoute } from 'vue-router'
 import { usePiniaStore } from '../store'
 const store = usePiniaStore()
 const route = useRoute()
-
 const product = ref(null)
+
+const isLiked = computed(() => {
+	console.log('islikd')
+	const index = store.likedProducts.findIndex(p => p.id == route.params.id)
+	return index == -1
+})
+
 const quantity = ref(1)
+const toogleLike = () => {
+	store.addProductToLiked(product.value)
+}
 
 const isOrdered = computed(() => {
-	const index = store.basket.findIndex(p => p.id == props.data.id)
+	const index = store.basket.findIndex(p => p.id == product.value.id)
 	return index == -1
 })
 
