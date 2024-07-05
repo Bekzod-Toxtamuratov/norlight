@@ -1,7 +1,4 @@
 <script setup>
-// definePageMeta({
-// 	layout: 'user',
-// })
 useHead({
 	title: 'Main page',
 	link: {
@@ -11,13 +8,11 @@ useHead({
 })
 </script>
 <template>
-	<!-- <NavbarHeader /> -->
 	<div class="">
 		<Carusel />
-		<!-- <Katalog /> -->
 		<Catalog />
-		<Pochemu />
-		<PopularProduct />
+		<why-norlight />
+		<PopularProducts />
 		<Swipper />
 		<BlogProduct />
 		<Manufacturing class="mt-[100px]" />

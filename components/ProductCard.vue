@@ -45,8 +45,10 @@ const isInKorzina = computed(() => {
 				/>
 			</button>
 		</div>
-		<div class="pl-6">
-			<h2 class="text-[16px] md:text-xl">
+		<div class="md:pl-6">
+			<h2
+				class="text-[14px] md:text-[16px] md:text-xl line-clamp-1 overflow-hidden"
+			>
 				{{ data?.title }}
 			</h2>
 			<p class="text-sm line-through text-[20px] leading-6">
@@ -56,28 +58,24 @@ const isInKorzina = computed(() => {
 				<p class="text-sm font-bold">{{ data?.newPrice }}</p>
 				<button
 					@click="toogleDelte"
-					class="bg-[#454545] py-[5px] px-[15px] rounded-[100px]"
+					class="bg-[#454545] max-md:mr-[30px] rounded-[100px]"
 				>
-					<div class="py-3">
+					<div class="">
 						<button
 							@click="toggleBasket"
-							class="bg-[#454545] px-4 rounded-2xl py-2"
+							class="bg-[#454545] px-[4px] md:px-[10px] rounded-2xl py-[2px] md:py-2"
 						>
 							<Icon
 								v-if="isInKorzina"
 								name="vaadin:cart-o"
-								width="24"
-								height="24"
 								style="color: white"
-								class="text-2xl"
+								class="text-xl"
 							/>
 							<Icon
 								v-else
 								name="material-symbols:delete-outline"
-								width="24"
-								height="24"
 								style="color: white"
-								class="text-2xl"
+								class="text-xl"
 							/>
 						</button>
 					</div>
