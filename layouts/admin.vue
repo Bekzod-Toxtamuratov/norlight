@@ -1,11 +1,10 @@
+<script setup></script>
+
 <template>
 	<div>
-		<Katalog />
-		<Swipper />
-		<BlogProduct />
+		<slot/>
+		<h2>admin.vue this page</h2>
 	</div>
 </template>
-
-<script setup></script>
 
 <style lang="scss" scoped></style>

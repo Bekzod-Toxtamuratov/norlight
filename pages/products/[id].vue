@@ -1,7 +1,6 @@
 <template>
 	<div class="container mx-auto p-6">
 		<div class="flex flex-col md:flex-row gap-6">
-			<!-- Product Image -->
 			<div class="md:w-1/2">
 				<img
 					v-if="product && product.image"
@@ -16,10 +15,7 @@
 					<p class="text-gray-500">Image not available</p>
 				</div>
 			</div>
-
-			<!-- Product Details -->
 			<div class="md:w-1/2 space-y-4 py-4">
-				<h1 class="text-3xl font-semibold">{{ product?.name }}</h1>
 				<div class="text-4xl">{{ product?.title }}</div>
 				<div class="text-gray-500">Scott</div>
 				<div class="flex justify-between">
@@ -32,19 +28,14 @@
 						<img src="/images/socials.png" alt="" class="hover:bg-slate-800" />
 					</div>
 				</div>
-
 				<div class="text-green-500">В наличии</div>
-
 				<div class="flex items-center py-5">
 					<div class="text-3xl font-bold text-black">{{ totalNewPrice }} ₽</div>
 					<div class="text-xl line-through text-gray-400 justify-start pl-4">
 						{{ totalOldPrice }} ₽
 					</div>
 				</div>
-
 				<p class="text-gray-600">{{ product?.description }}</p>
-
-				<!-- Quantity and Add to Cart -->
 				<div class="flex items-center space-x-4">
 					<div class="flex items-center border border-gray-300 rounded-lg">
 						<button @click="updateQuantity(-1)" class="px-4 py-2 text-gray-600">
@@ -61,6 +52,7 @@
 						</button>
 					</div>
 					<button
+						@click="addBasket"
 						class="bg-black text-white rounded-lg py-2 px-6 hover:bg-gray-800"
 					>
 						В корзину
@@ -81,11 +73,25 @@
 import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
+import { usePiniaStore } from '../store'
+const store = usePiniaStore()
 const route = useRoute()
 
 const product = ref(null)
 const quantity = ref(1)
 
+const isOrdered = computed(() => {
+	const index = store.basket.findIndex(p => p.id == props.data.id)
+	return index == -1
+})
+
+const addBasket = () => {
+	if (isOrdered.value) {
+		store.basket.push({ ...product.value, quantity: quantity.value })
+	} else {
+		alert('this product is already in the basket')
+	}
+}
 const fetchProduct = async () => {
 	try {
 		const response = await fetch(
@@ -117,7 +123,8 @@ const updateQuantity = amount => {
 
 const totalNewPrice = computed(() => {
 	return product.value
-		? (product.value.newPrice * quantity.value).toFixed(2): '0'
+		? (product.value.newPrice * quantity.value).toFixed(2)
+		: '0'
 })
 
 const totalOldPrice = computed(() => {

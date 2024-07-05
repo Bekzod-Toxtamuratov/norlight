@@ -11,19 +11,19 @@
 				</div>
 				<ul class="mt-4 space-y-2 text-center md:text-left">
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-700"
-							>Политика конфиденциальности</a
-						>
+						<a href="#" class="text-gray-500 hover:text-gray-700">
+							Политика конфиденциальности
+						</a>
 					</li>
 					<li>
-						<a href="#" class="text-gray-500 hover:text-gray-700"
-							>Пользовательское соглашение</a
-						>
+						<a href="#" class="text-gray-500 hover:text-gray-700">
+							Пользовательское соглашение
+						</a>
 					</li>
 				</ul>
 				<div class="flex mt-4 space-x-3">
-					<a href="#"
-						><svg
+					<a href="#">
+						<svg
 							width="36"
 							height="36"
 							viewBox="0 0 36 36"
@@ -37,8 +37,8 @@
 							<circle cx="18" cy="18" r="17.5" stroke="#454545" />
 						</svg>
 					</a>
-					<a href="#"
-						><svg
+					<a href="#">
+						<svg
 							width="36"
 							height="36"
 							viewBox="0 0 36 36"
@@ -52,8 +52,8 @@
 							<circle cx="18" cy="18" r="17.5" stroke="#454545" />
 						</svg>
 					</a>
-					<a href="#"
-						><svg
+					<a href="#">
+						<svg
 							width="36"
 							height="36"
 							viewBox="0 0 36 36"
@@ -82,9 +82,9 @@
 							>
 						</li>
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700"
-								>Доставка и оплата</a
-							>
+							<a href="#" class="text-gray-500 hover:text-gray-700">
+								Доставка и оплата
+							</a>
 						</li>
 						<li>
 							<a href="#" class="text-gray-500 hover:text-gray-700">Возврат</a>
@@ -101,17 +101,15 @@
 					</ul>
 				</div>
 				<div class="space-y-2">
-					<h4 class="font-semibold">Товары</h4>
+					<h4 class="font-semibold">Каталог</h4>
 					<ul class="space-y-1">
-						<nuxt-link to="/products">
-							<li>
-								<a href="#" class="text-gray-500 hover:text-gray-700">Люстры</a>
-							</li>
-						</nuxt-link>
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700"
-								>Светильники</a
-							>
+							<a href="#" class="text-gray-500 hover:text-gray-700">Люстры</a>
+						</li>
+						<li>
+							<a href="#" class="text-gray-500 hover:text-gray-700">
+								Светильники
+							</a>
 						</li>
 						<li>
 							<a href="#" class="text-gray-500 hover:text-gray-700">Бра</a>
@@ -120,14 +118,14 @@
 							<a href="#" class="text-gray-500 hover:text-gray-700">Торшеры</a>
 						</li>
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700"
-								>Комплектующие</a
-							>
+							<a href="#" class="text-gray-500 hover:text-gray-700">
+								Комплектующие
+							</a>
 						</li>
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700"
-								>Настольные лампы</a
-							>
+							<a href="#" class="text-gray-500 hover:text-gray-700">
+								Настольные лампы
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -135,24 +133,24 @@
 					<h4 class="font-semibold">Споты</h4>
 					<ul class="space-y-1">
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700"
-								>Трековые светильники</a
-							>
+							<a href="#" class="text-gray-500 hover:text-gray-700">
+								Трековые светильники
+							</a>
 						</li>
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700"
-								>Уличные светильники</a
-							>
+							<a href="#" class="text-gray-500 hover:text-gray-700">
+								Уличные светильники
+							</a>
 						</li>
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700"
-								>Технические светильники</a
-							>
+							<a href="#" class="text-gray-500 hover:text-gray-700">
+								Технические светильники
+							</a>
 						</li>
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700"
-								>Светодиодные ленты</a
-							>
+							<a href="#" class="text-gray-500 hover:text-gray-700">
+								Светодиодные ленты
+							</a>
 						</li>
 					</ul>
 				</div>

@@ -1,6 +1,9 @@
 <script setup>
+import { usePiniaStore } from '../store'
+
 const showModal = ref(false)
 const showInput = ref(true)
+const count = ref()
 const showSidebar = ref(false)
 const toggleModal = () => {
 	showModal.value = !showModal.value
@@ -10,6 +13,7 @@ const toggleSidebar = () => {
 	showSidebar.value = !showSidebar.value
 	showInput.value = !showInput.value
 }
+const store = usePiniaStore()
 </script>
 <template>
 	<div class="container md:mb-16">
@@ -63,8 +67,15 @@ const toggleSidebar = () => {
 			</form>
 			<div class="flex items-center gap-8">
 				<nuxt-link to="/Favourite">
-					<div class="flex flex-col items-center">
-						<img src="/like.svg" alt="" />
+					<div class="flex flex-col items-center relative">
+						<div>
+							<img class="" src="/like.svg" alt="" />
+						</div>
+						<div
+							class="bg-[#C63C3C] absolute top-[-19px] right-[12px] rounded-full py-[2px] px-[10px] text-white"
+						>
+							{{ store.likedProducts.length }}
+						</div>
 						<p class="md:block hidden">Избранное</p>
 					</div>
 				</nuxt-link>
@@ -73,8 +84,17 @@ const toggleSidebar = () => {
 					<img v-if="showInput" src="/reyting.svg" alt="" />
 					<p>Сравнение</p>
 				</div>
-				<div class="flex flex-col items-center">
-					<img src="/cart.svg" alt="" />
+				<div class="flex flex-col items-center relative">
+					<nuxt-link to="/Basket">
+						<div>
+							<img src="/cart.svg" alt="" />
+						</div>
+					</nuxt-link>
+					<div
+						class="bg-[#C63C3C] absolute top-[-15px] right-[1px] rounded-full py-[2px] px-[10px] text-white"
+					>
+						{{ store.basket.length }}
+					</div>
 					<p class="md:block hidden">Корзина</p>
 				</div>
 			</div>
@@ -119,10 +139,10 @@ const toggleSidebar = () => {
 						</li>
 					</ul>
 				</nav>
-				<nuxt-link
+				<NuxtLink
 					to="/Katalog"
 					class="bg-primary py-3 items-center px-40 mt-7 flex rounded-full text-white gap-2 w-[370px] mx-auto"
-					><img src="/catalog.svg" alt="icon" />Каталог</nuxt-link
+					><img src="/catalog.svg" alt="icon" />Каталог</NuxtLink
 				>
 				<div class="flex flex-col items-center gap-3 mt-8">
 					<a class="text-primary text-sm" href="tel:+8 (800) 890-46-56"

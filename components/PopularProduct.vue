@@ -24,5 +24,4 @@ loading.value = false
 		</div>
 	</div>
 </template>
-
 <style scoped></style>

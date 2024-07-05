@@ -12,7 +12,6 @@ const props = defineProps({
 				class="w-full h-[126px] md:h-[304px] object-cover md:pl-6 rounded mb-2"
 			/>
 		</div>
-
 		<div class="flex flex-col gap-1 md:gap-5 pl-6">
 			<div class="flex justify-between items-center">
 				<p class="text-xl font-bold">{{ props.data?.sana }}</p>
@@ -20,7 +19,9 @@ const props = defineProps({
 					<img src="/korsat.svg" />
 				</button>
 			</div>
-			<h2 class="mb-3  text-[14px] leading-[15px] max-w-[118px] md:max-w-[227px]">
+			<h2
+				class="mb-3 text-[14px] leading-[15px] max-w-[118px] md:max-w-[227px]"
+			>
 				{{ props.data?.title }}
 			</h2>
 		</div>

@@ -1,6 +1,5 @@
 <script setup>
 import BlogCard from './BlogCard.vue'
-
 const products = ref(null)
 const loading = ref(false)
 loading.value = true
