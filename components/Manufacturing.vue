@@ -2,14 +2,11 @@
 	<div class="container mx-auto p-5">
 		<div class="flex flex-col lg:flex-row">
 			<div class="lg:w-1/2">
-				<h1 class="text-4xl font-bold">
-					Производство <br />
-					Светильников
-				</h1>
+				<h1 class="text-4xl font-bold">Блог</h1>
 			</div>
 
 			<div class="lg:w-1/2 lg:pl-5 mt-5 lg:mt-0 pb-10">
-				<p>
+				<p class="text-[20px] leading-[30px]">
 					Интернет-магазин NORNLIGHT предлагает широкий ассортимент светильников
 					для освещения вашего дома или офиса. У нас вы найдете разнообразные
 					модели светильников, от современных и стильных до классических и

@@ -16,7 +16,7 @@ const props = defineProps({
 			<div class="flex justify-between items-center">
 				<p class="text-xl font-bold">{{ props.data?.sana }}</p>
 				<button class="bg-[white] py-2 md:py-3 px-3 md:px-5 rounded-[100px]">
-					<img src="/korsat.svg" />
+					<img class="max-md:w-[13px] max-md:h-[13px]" src="/korsat.svg" />
 				</button>
 			</div>
 			<h2

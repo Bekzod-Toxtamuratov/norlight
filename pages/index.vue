@@ -6,13 +6,16 @@ useHead({
 		rel: 'stylesheet',
 	},
 })
+definePageMeta({
+	layout: 'default',
+})
 </script>
 <template>
 	<div class="">
 		<Carusel />
 		<Catalog />
 		<why-norlight />
-		<PopularProducts />
+		<!-- <PopularProducts /> -->
 		<Swipper />
 		<BlogProduct />
 		<Manufacturing class="mt-[100px]" />
