@@ -1,22 +1,22 @@
 <template>
-	<div class="container">
+	<div class="container max-md:mb-[2px]">
 		<h2 class="text-[16px] leading-6 font-medium mt-[48px] mb-5">Возврат</h2>
 		<div class="md:flex gap-x-[102px] justify-center">
 			<div class="md:w-[45%]">
-				<h1 class="font-bold md:leading-[70px] text-[28px] md:text-[64px] mb-9">
+				<h1 class="font-bold md:leading-[70px]  leading-9   text-[28px] md:text-[64px] mb-9">
 					Возврат
 				</h1>
 			</div>
 			<div class="md:w-[55%]">
-				<h2 class="font-semibold text-xl">
+				<h2 class="font-semibold text-xl max-md:max-w-[292px]">
 					Обмен и возврат по желанию покупателя
 				</h2>
-				<p class="font-normal text-xl mt-7">
+				<p class="font-normal text-[16px]  leading-7 md:text-xl mt-7">
 					Обмен и возврат по желанию покупателя Если товар по каким-то причинам
 					не подошел вам, вы имеете право вернуть его или обменять на другой в
 					течение 7 дней* с момента покупки при соблюдении следующих условий:
 				</p>
-				<p class="md:text-[20px] leading-7 font-normal mt-8 text-[#2F4DA3]">
+				<p class="md:text-[20px] leading-7  text-[16px]  font-normal mt-8 text-[#2F4DA3]">
 					<ul class="pl-4  list-disc text-[#2F4DA3]">
                             <li>Товар имеет первоначальный вид, имеется товарная кондиция; Товар имеет</li>
                             <li>Товар имеет полную комплектацию, включая упаковочные материалы;</li>
@@ -35,10 +35,10 @@
 					</ul>
 				</p>
 				<!-- ************************** -->
-				<h2 class="font-semibold text-xl my-8">
+				<h2 class="font-semibold text-[24px] leading-[34px] my-8">
 					Обмен и возврат по ошибке продавца
 				</h2>
-				<h3 class="mb-5 text-xl">Причины обмена или возврата по ошибке продавца: </h3>
+				<h3 class="mb-5 md:text-xl text-[16px] leading-7">Причины обмена или возврата по ошибке продавца: </h3>
 				<ul class="pl-4  list-disc text-[#2F4DA3]">
                             <li>Товар имеет первоначальный вид, имеется товарная кондиция; Товар имеет</li>
                             <li>Товар имеет полную комплектацию, включая упаковочные материалы;</li>
@@ -51,7 +51,7 @@
 					</ul>
 				
 				<h2 class="font-semibold text-xl mt-8">Возврат денежных средств</h2>
-				<p class="md:text-[20px] leading-7 font-normal mt-8 mb-[116px]">
+				<p class="text-xl  font-normal mt-8 mb-[116px]">
 					Возврат денежных средств осуществляется путем перевода на банковские
 					реквизиты покупателя при наличии заявления от покупателя.
 				</p>

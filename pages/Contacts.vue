@@ -18,7 +18,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="w-full border mt-[116px] mb-[80px] h-[400px] md:h-[672px]">
+		<div class="max-md:mt-[10px]   w-full border mt-[116px] mb-[80px] h-[400px] md:h-[672px]">
 			<iframe
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5996.393785721653!2d69.19345833847153!3d41.28281913525276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a2f4da56069%3A0xe463bd88790d0f97!2sChilanzar-10%2C%20Tashkent%2C%20Tashkent%20Region%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1720045569039!5m2!1sen!2s"
 				width="100%"

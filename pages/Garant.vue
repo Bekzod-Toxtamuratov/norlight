@@ -1,5 +1,5 @@
 <template>
-	<div class="container mb-[104px]">
+	<div class="container mb-[104px] max-md:mt-[30px]">
 		<h2 class="text-[16px] leading-6 font-medium mt-[48px] mb-5">Гарантии</h2>
 		<div class="md:flex gap-x-[102px] justify-center">
 			<div class="md:w-[45%]">
