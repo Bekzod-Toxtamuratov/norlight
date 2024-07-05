@@ -1,17 +1,15 @@
 <script setup>
-const products = ref(null)
 const loading = ref(false)
 loading.value = true
-const { data } = await useFetch(
+const { data: products } = await useFetch(
 	'https://6684d16356e7503d1ae140ec.mockapi.io/products'
 )
-products.value = data.value
 loading.value = false
 </script>
 <template>
 	<div class="container mt-[100px]">
 		<div class="loading" v-if="loading">Loading ...</div>
-		<div v-if="products" class="grid-cols-2 grid md:grid-cols-4 gap-4">
+		<div class="grid-cols-2 grid md:grid-cols-4 gap-4">
 			<ProductCard v-for="item in products" :key="item?.id" :data="item" />
 		</div>
 		<div class="md:hidden flex items-center justify-center">

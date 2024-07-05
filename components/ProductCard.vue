@@ -61,7 +61,7 @@ const isInKorzina = computed(() => {
 					<div class="py-3">
 						<button
 							@click="toggleBasket"
-							class="bg-[#454545] px-[3px] rounded-2xl py-[3px]"
+							class="bg-[#454545] px-4 rounded-2xl py-2"
 						>
 							<Icon
 								v-if="isInKorzina"
