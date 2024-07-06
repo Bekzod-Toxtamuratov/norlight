@@ -30,9 +30,12 @@ const { data: products } = await useFetch(
 			</div>
 		</div>
 
-		<div class="grid-cols-2 grid md:grid-cols-4 gap-4">
+		<div v-if="products" class="grid-cols-2 grid md:grid-cols-4 gap-4">
 			<ProductCard v-for="item in products" :key="item?.id" :data="item" />
 		</div>
+		<!-- <div v-if="products" class="grid-cols-2 grid md:grid-cols-4 gap-4">
+			<ProductCard v-for="item in products" :key="item?.id" :data="item" />
+		</div> -->
 		<!-- <nuxt-link to="/">
 			<button
 				class="md:hidden w-full mt-10 border border-black rounded-full p-5 px-6 text-sm items-center justify-center flex gap-1 h-3 hover:bg-[#FF58065B] hover:text-white"

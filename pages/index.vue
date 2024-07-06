@@ -15,7 +15,7 @@ definePageMeta({
 		<Carusel />
 		<Catalog />
 		<why-norlight />
-		<!-- <PopularProducts /> -->
+		<PopularProduct />
 		<Swipper />
 		<BlogProduct />
 		<Manufacturing class="mt-[100px]" />
