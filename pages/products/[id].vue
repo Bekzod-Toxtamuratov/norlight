@@ -21,11 +21,7 @@
 				<div class="flex justify-between">
 					<div class="text-gray-500">Артикул: 7655-188</div>
 					<div class="flex gap-2">
-						<img src="/images/socials.png" alt="" />
-						<img src="/images/socials.png" alt="" class="hover:bg-slate-800" />
-						<img src="/images/socials.png" alt="" class="hover:bg-slate-800" />
-						<img src="/images/socials.png" alt="" class="hover:bg-slate-800" />
-						<img src="/images/socials.png" alt="" class="hover:bg-slate-800" />
+						<img src="/images/socials2.png" alt="" />
 					</div>
 				</div>
 				<div class="text-green-500">В наличии</div>

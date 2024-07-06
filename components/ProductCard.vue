@@ -58,27 +58,20 @@ const isInKorzina = computed(() => {
 				<p class="text-sm font-bold">{{ data?.newPrice }}</p>
 				<button
 					@click="toogleDelte"
-					class="bg-[#454545] max-md:mr-[30px] rounded-[100px]"
+					class="bg-[#454545] py-[3px] px-[3px] rounded-[100px] md:py-[8px] md:px-[10px]"
 				>
-					<div class="">
-						<button
-							@click="toggleBasket"
-							class="bg-[#454545] px-[4px] md:px-[10px] rounded-2xl py-[2px] md:py-2"
-						>
-							<!-- <Icon
-								v-if="isInKorzina"
-								name="vaadin:cart-o"
-								style="color: white"
-								class="text-xl"
-							/>
-							<Icon
-								v-else
-								name="material-symbols:delete-outline"
-								style="color: white"
-								class="text-xl"
-							/> -->
-						</button>
-					</div>
+					<Icon
+						v-if="isInKorzina"
+						name="vaadin:cart-o"
+						style="color: white"
+						class="text-xl md:text-2xl"
+					/>
+					<Icon
+						v-else
+						name="material-symbols:delete-outline"
+						style="color: white"
+						class="text-xl md:text-2xl"
+					/>
 				</button>
 			</div>
 		</div>
