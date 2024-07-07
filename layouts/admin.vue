@@ -6,6 +6,7 @@
 			<Sidebar />
 		</div>
 		<div class="w-4/5">
+		
 			<slot />
 		</div>
 	</main>

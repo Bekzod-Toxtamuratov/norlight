@@ -1,32 +1,23 @@
 import axios from 'axios'
 
-
 const instance = axios.create({
-  baseURL: 'https://dummyjson.com'
+	baseURL: 'https://dummyjson.com',
 })
-
-
 instance.interceptors.request.use(config => {
+	const user = JSON.parse(localStorage.getItem('user'))
 
-  const user = JSON.parse(localStorage.getItem('user'))
+	if (user) {
+		config.headers['Authorization'] = `Bearer ${user.token}`
+	}
 
-  if (user) {
-    config.headers['Authorization'] = `Bearer ${user.token}`
-
-  }
-
-  return config
-
+	return config
 })
 
 instance.interceptors.response.use(
-  response => response,
-  error => {
-    console.log('error', error);
-  }
+	response => response,
+	error => {
+		console.log('error', error)
+	}
 )
-
-
-
 
 export default instance

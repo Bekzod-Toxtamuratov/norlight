@@ -1,29 +1,44 @@
 <script setup>
-import axios from 'axios'
 definePageMeta({
 	layout: 'admin',
 	middleware: ['auth'],
 })
+import axios from 'axios'
+const route = useRoute()
+const loading = ref(true)
 const router = useRouter()
-const newProduct = {
+const newProduct = ref({
 	title: '',
 	newPrice: '',
 	oldPrice: '159.0',
 	image: '',
 	description: '',
-}
-
-function createProduct() {
+})
+function updateProduct() {
 	try {
-		axios.post(
-			'https://66855e79b3f57b06dd4c795c.mockapi.io/products',
-			newProduct
+		axios.put(
+			`https://66855e79b3f57b06dd4c795c.mockapi.io/products/${route.params.id}`,
+			newProduct.value
 		)
-		router.push('/admin/dashboard')
+		router.push('/admin/manage-product')
+		console.log('Succes')
 	} catch (error) {
 		console.error(error)
 	}
 }
+const fetchProduct = () => {
+	loading.value = true
+	axios
+		.get(
+			`https://66855e79b3f57b06dd4c795c.mockapi.io/products/${route.params.id}`,
+			{}
+		)
+		.then(res => {
+			newProduct.value = res.data
+		})
+}
+fetchProduct()
+console.log(newProduct.value)
 </script>
 
 <template>
@@ -47,7 +62,7 @@ function createProduct() {
 				type="text"
 			/>
 		</div>
-		<div class="mt-[20px]">
+		<div class="mt-[20px]" :model="newProduct">
 			<p class="text-[16px] text-[16px]">Image-url</p>
 			<input
 				class="w-[620px] text-[18px] p-[10px] h-[50px] bg-[#F8F8F8] rounded-[10px] mt-[10px]"
@@ -66,11 +81,11 @@ function createProduct() {
 			/>
 		</div>
 		<button
-			@click="createProduct"
+			@click="updateProduct"
 			type="submit"
 			class="w-[180px] h-[50px] bg-[#454545] rounded-[8px] text-[#fff] mt-[20px]"
 		>
-			Create
+			Update
 		</button>
 	</div>
 </template>

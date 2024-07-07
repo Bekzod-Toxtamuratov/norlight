@@ -145,7 +145,7 @@
 					₽
 				</h3>
 				<button
-					@click="btn()"
+					@click="addorder()"
 					class="col-span-1 w-full py-[14px] bg-primary text-white font-medium rounded-full"
 				>
 					Купить
@@ -165,16 +165,12 @@
 import { Icon } from '@iconify/vue'
 import { onMounted, ref } from 'vue'
 import { usePiniaStore } from '../store'
-
 const store = usePiniaStore()
 const products = ref([])
 const isLoading = ref(true)
 const counts = ref({})
-
 const headers = ['Фото', 'Товары', 'Описание', 'Артикул', 'Артикул']
-
 const order = ref(['ФИО', 'телефон', 'Электронная почта'])
-
 onMounted(() => {
 	setTimeout(() => {
 		products.value = store.basket.map(product => ({
@@ -184,27 +180,53 @@ onMounted(() => {
 		isLoading.value = false
 	}, 1000)
 })
-
-function btn() {
-	alert('successfully failed!')
-}
-
 const removeProduct = productId => {
 	console.log('products.value:', products.value)
 	const index = products.value.findIndex(item => {
-		return item && item.id === productId
-	})
+		return item && item.id === productId})
 
 	if (index !== -1) {
 		products.value.splice(index, 1)
 		store.removeProductBasket(productId)
-
 		console.log('store.basket content:', store.basket)
 		console.log('store.basket length:', store.basket.length)
 	} else {
 		console.error('Product not found:', productId)
 	}
 }
+const order2 = ref({
+	full_name: '',
+	phone: '',
+	email: '',
+	address: '',
+	comment: '',
+	products: products,
+	totalPrice: calculateTotalPrice() + 580,
+})
+function addorder() {
+	store.addOrder(order2.value)
+}
+function calculateTotalPrice() {
+	let totalPrice = 0
+	store.basket.forEach(product => {
+		totalPrice += Number(product.newPrice) * Number(product.count)
+	})
+	return totalPrice
+}
+
+// function increment(id) {
+//     const foundProduct = products.find(product => product.id === id);
+//     if (foundProduct) {
+//         foundProduct.count += 1;
+//     }
+// }
+
+// function decrement(id) {
+//     const foundProduct = products.find(product => product.id === id);
+//     if (foundProduct && foundProduct.count > 1) {
+//         foundProduct.count -= 1;
+//     }
+// }
 
 const getCount = productId => counts.value[productId] || 1
 

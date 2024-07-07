@@ -7,9 +7,7 @@ export const usePiniaStore = defineStore('pinia', {
 				{
 					fullname: '',
 					phone: '',
-					product: [
-						
-					],
+					product: [],
 				},
 				{
 					fullname: '',
@@ -45,6 +43,10 @@ export const usePiniaStore = defineStore('pinia', {
 		},
 		removeProductBasket(id) {
 			this.basket = this.basket.filter(p => p.id !== id)
+		},
+		addOrder(order) {
+			this.orders.push(order)
+			this.basket = []
 		},
 	},
 	persist: true,

@@ -43,8 +43,8 @@ import api from '../../../api2'
 const check = ref(false)
 const router = useRouter()
 const userData = reactive({
-	username: '',
-	password: '',
+	username: 'emilys',
+	password: 'emilyspass',
 })
 
 const myfunction = () => {

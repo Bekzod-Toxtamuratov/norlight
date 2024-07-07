@@ -47,7 +47,7 @@ onMounted(() => {
                     class="button2 sidebar_item flex text-[#fff] w-[250px] mt-[5px] hover:bg-[#fff]/20 items-center rounded-[8px]  h-[40px] p-[5px]">
                     <img class="w-[21px] h-[19px] mr-[20px]" src="../public/createproducticon.png" alt=""> Create product
                 </button></nuxt-link>
-            <nuxt-link to="/admin/edit-product">
+            <nuxt-link to="/admin/manage-product">
                 <button
                     class=" button3 sidebar_item mt-[5px] flex text-[#fff] w-[250px] hover:bg-[#fff]/20 items-center rounded-[8px]  h-[40px] p-[5px]">
                     <img class="w-[21px] h-[19px] mr-[20px]" src="../public/adminpane.png" alt=""> Manage product

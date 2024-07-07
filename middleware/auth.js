@@ -1,7 +1,11 @@
-export default defineNuxtRouteMiddleware((to,from)=>{
-	const token=null;
-	console.log('test',to);
-	if(!token){
-		return navigateTo('/auth/login');
+export default defineNuxtRouteMiddleware((to, from) => {
+	const token = localStorage.getItem('user')
+
+	if (!token) {
+		console.log('Token not found, redirecting to login page')
+		return navigateTo('/auth/login')
 	}
-})	
+	//  else {
+	// 	return navigateTo('/admin')
+	// }
+})

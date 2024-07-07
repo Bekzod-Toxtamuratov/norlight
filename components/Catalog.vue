@@ -3,7 +3,7 @@
 		<div class="flex justify-between pb-4">
 			<h2 class="text-2xl font-bold mb-6 text-center flex">Каталог</h2>
 
-			<nuxt-link to="/katalog">
+			<nuxt-link to="/Katalog">
 				<button
 					class="hover:translate-x-4 max-md:hidden border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3 hover:bg-[#FF58065B] hover:text-white"
 				>
