@@ -1,83 +1,3 @@
-<template>
-	<div class="container mx-auto p-6">
-		<div class="flex flex-col md:flex-row gap-6">
-			<div class="md:w-1/2">
-				<img
-					v-if="product && product.image"
-					:src="product.image"
-					alt="Product Image"
-					class="w-full h-auto object-cover rounded-lg shadow-lg"
-				/>
-				<div
-					v-else
-					class="w-full h-auto object-cover rounded-lg shadow-lg bg-gray-200 flex items-center justify-center"
-				>
-					<p class="text-gray-500">Image not available</p>
-				</div>
-			</div>
-			<div class="md:w-1/2 space-y-4 py-4">
-				<div class="text-4xl">{{ product?.title }}</div>
-				<div class="text-gray-500">Scott</div>
-				<div class="flex justify-between">
-					<div class="text-gray-500">Артикул: 7655-188</div>
-					<div class="flex gap-2">
-						<img src="/images/socials2.png" alt="" />
-					</div>
-				</div>
-				<div class="text-green-500">В наличии</div>
-				<div class="flex items-center py-5">
-					<div class="text-3xl font-bold text-black">{{ totalNewPrice }} ₽</div>
-					<div class="text-xl line-through text-gray-400 justify-start pl-4">
-						{{ totalOldPrice }} ₽
-					</div>
-				</div>
-				<p class="text-gray-600">{{ product?.description }}</p>
-				<div class="flex items-center space-x-4">
-					<div class="flex items-center border border-gray-300 rounded-lg">
-						<button @click="updateQuantity(-1)" class="px-4 py-2 text-gray-600">
-							-
-						</button>
-						<input
-							type="text"
-							:value="quantity"
-							class="w-12 text-center border-none focus:outline-none"
-							readonly
-						/>
-						<button @click="updateQuantity(1)" class="px-4 py-2 text-gray-600">
-							+
-						</button>
-					</div>
-					<button
-						@click="addBasket"
-						class="bg-black text-white rounded-lg py-2 px-6 hover:bg-gray-800"
-					>
-						В корзину
-					</button>
-					<button
-						@click="toogleLike"
-						class="border border-gray-300 rounded-lg py-2 px-4 hover:bg-gray-200"
-					>
-						<!-- <img src="/images/heart.png" alt="" /> -->
-						<Icon
-							v-if="isLiked"
-							name="weui:like-outlined"
-							color="black"
-							class="text-xl md:text-2xl"
-						/>
-						<Icon
-							v-else
-							name="flat-color-icons:like"
-							class="text-xl md:text-2xl"
-							color="black"
-						/>
-					</button>
-				</div>
-			</div>
-		</div>
-		<Spec class="my-[50px]" />
-	</div>
-</template>
-
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
@@ -155,5 +75,86 @@ onMounted(() => {
 	fetchProduct()
 })
 </script>
+
+<template>
+	<div class="container pt-10">
+		<div class="flex flex-col md:flex-row gap-6">
+			<div class="md:w-1/2">
+				<img
+					v-if="product && product.image"
+					:src="product.image"
+					alt="Product Image"
+					class="w-full h-auto object-cover rounded-lg shadow-lg"
+				/>
+				<div
+					v-else
+					class="w-full h-auto object-cover rounded-lg shadow-lg bg-gray-200 flex items-center justify-center"
+				>
+					<p class="text-gray-500">Image not available</p>
+				</div>
+			</div>
+			<div class="md:w-1/2 space-y-4 py-4">
+				<div class="text-4xl">{{ product?.title }}</div>
+				<div class="text-gray-500">Scott</div>
+				<div class="flex justify-between">
+					<div class="text-gray-500">Артикул: 7655-188</div>
+					<div class="flex gap-2"></div>
+				</div>
+				<div class="text-green-500">В наличии</div>
+				<div class="flex items-center py-5">
+					<div class="text-[40px] leading-[64px] font-bold text-black">
+						{{ totalNewPrice ? totalNewPrice : '' }} ₽
+					</div>
+					<div class="line-through text-gray-400 justify-start pl-4">
+						{{ totalOldPrice ? totalOldPrice : '' }} ₽
+					</div>
+				</div>
+				<p class="text-[#4C4C4C] max-w-[607px] text-[16px] leading-7">
+					{{ product?.description }}
+				</p>
+				<div class="flex items-center space-x-4">
+					<div class="flex items-center border border-gray-300 rounded-lg">
+						<button @click="updateQuantity(-1)" class="px-4 py-2 text-gray-600">
+							-
+						</button>
+						<input
+							type="text"
+							:value="quantity"
+							class="w-12 text-center border-none focus:outline-none"
+							readonly
+						/>
+						<button @click="updateQuantity(1)" class="px-4 py-2 text-gray-600">
+							+
+						</button>
+					</div>
+					<button
+						@click="addBasket"
+						class="bg-black text-white rounded-lg py-2 px-6 hover:bg-gray-800"
+					>
+						В корзину
+					</button>
+					<button
+						@click="toogleLike"
+						class="border border-gray-300 rounded-lg py-2 px-4 hover:bg-gray-200"
+					>
+						<Icon
+							v-if="isLiked"
+							name="weui:like-outlined"
+							color="black"
+							class="text-xl md:text-2xl"
+						/>
+						<Icon
+							v-else
+							name="flat-color-icons:like"
+							class="text-xl md:text-2xl"
+							color="black"
+						/>
+					</button>
+				</div>
+			</div>
+		</div>
+		<Spec class="my-[50px]" />
+	</div>
+</template>
 
 <style scoped></style>

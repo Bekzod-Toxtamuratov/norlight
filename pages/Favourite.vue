@@ -5,6 +5,15 @@
 		>
 			Избранные товары
 		</h1>
+		<div
+			v-if="store.likedProducts.length == 0"
+			class="flex flex-col items-center justify-between mt-20"
+		>
+			<h2 class="text-2xl md:text-5xl text-center text-black mb-5">
+				No your Favourite Product
+			</h2>
+			<i class="fas fa-box-open text-5xl md:text-9xl"></i>
+		</div>
 		<div class="grid-cols-4 grid md:grid-cols mb-[100px] gap-2">
 			<ProductCard
 				v-for="item in store.likedProducts"
@@ -16,6 +25,7 @@
 </template>
 
 <script setup>
+import '@fortawesome/fontawesome-free/css/all.css'
 import { usePiniaStore } from '../store'
 const store = usePiniaStore()
 </script>

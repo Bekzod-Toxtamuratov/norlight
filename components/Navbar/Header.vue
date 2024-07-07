@@ -86,7 +86,7 @@ const store = usePiniaStore()
 					<p>Сравнение</p>
 				</div>
 				<div class="flex flex-col items-center relative">
-					<nuxt-link to="/Basket">
+					<nuxt-link to="/basket">
 						<div>
 							<img src="/cart.svg" alt="" />
 						</div>

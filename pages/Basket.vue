@@ -1,76 +1,160 @@
 <template>
-	<div class="container">
-		<h1
-			class="text-[28px] leading-[38px] md:text-[64px] font-bold md:leading-[71px] my-[30px]"
+	<div class="container my-10">
+		<div class="flex justify-between mb-10 items-center">
+			<h4 class="font-bold text-[40px] max-md:text-[28px]">Корзина</h4>
+		</div>
+		<div v-if="isLoading" class="text-3xl text-gray-500 text-center py-10">
+			<Loading />
+		</div>
+		<div
+			v-else-if="products.length > 0"
+			class="grid md:grid-cols-9 py-9 px-11 rounded-[20px] bg-second md:mt-10"
 		>
-			Корзина
-		</h1>
-		<div class="mb-[100px] gap-2">
-			<div class="flex gap-y-5 items-start">
-				<div>
-					<table border="1">
-						<thead class="p-5">
-							<tr>
-								<th>Фото</th>
-								<th>Товары</th>
-								<th>Описание</th>
-								<th>Артикул</th>
-								<th>Количество</th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr
-								v-for="item in store.basket"
-								class="px-[30px]"
-								:key="item.name"
-							>
-								<td>
-									<nuxt-link :to="'/products/' + item?.id">
-										<img
-											:src="item?.image"
-											alt="image"
-											class="h-[126px] md:h-[120px] w-[70%] object-cover md:pl-6 mb-2"
-										/>
-									</nuxt-link>
-								</td>
-								<td class="flex flex-col justify-center">
-									{{ item?.title }}
-									{{ item?.newPrice }}
-								</td>
-								<td>
-									Светильник RADUGA COMBO XS Промышленное освещение; 50Вт; 230В;
-									S4; XS;
-								</td>
-								<td>RAD-COMBO-50/XXX/230/XXX/XXX/S4/XS</td>
-								<td><button class="font-bold">-</button></td>
-								<td>
-									<button class="py-2 px-4">{{ item.quantity }}</button>
-								</td>
-								<td><button>+</button></td>
-								<td>
-									<button>
-										<svg
-											width="22"
-											height="26"
-											viewBox="0 0 22 26"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												d="M19.1667 7.16675C18.8572 7.16675 18.5605 7.28966 18.3417 7.50846C18.1229 7.72725 18 8.024 18 8.33341V21.3896C17.9665 21.9795 17.7013 22.5324 17.2621 22.9277C16.8229 23.323 16.2452 23.5287 15.655 23.5001H6.345C5.75478 23.5287 5.17715 23.323 4.73792 22.9277C4.2987 22.5324 4.03347 21.9795 4 21.3896V8.33341C4 8.024 3.87708 7.72725 3.65829 7.50846C3.4395 7.28966 3.14275 7.16675 2.83333 7.16675C2.52391 7.16675 2.22717 7.28966 2.00838 7.50846C1.78958 7.72725 1.66667 8.024 1.66667 8.33341V21.3896C1.69997 22.5985 2.21101 23.745 3.08788 24.5779C3.96474 25.4108 5.13595 25.8623 6.345 25.8334H15.655C16.864 25.8623 18.0353 25.4108 18.9121 24.5779C19.789 23.745 20.3 22.5985 20.3333 21.3896V8.33341C20.3333 8.024 20.2104 7.72725 19.9916 7.50846C19.7728 7.28966 19.4761 7.16675 19.1667 7.16675ZM20.3333 3.66675H15.6667V1.33341C15.6667 1.024 15.5437 0.727249 15.325 0.508457C15.1062 0.289664 14.8094 0.166748 14.5 0.166748H7.5C7.19058 0.166748 6.89383 0.289664 6.67504 0.508457C6.45625 0.727249 6.33333 1.024 6.33333 1.33341V3.66675H1.66667C1.35725 3.66675 1.0605 3.78966 0.841709 4.00846C0.622916 4.22725 0.5 4.524 0.5 4.83341C0.5 5.14283 0.622916 5.43958 0.841709 5.65837C1.0605 5.87716 1.35725 6.00008 1.66667 6.00008H20.3333C20.6428 6.00008 20.9395 5.87716 21.1583 5.65837C21.3771 5.43958 21.5 5.14283 21.5 4.83341C21.5 4.524 21.3771 4.22725 21.1583 4.00846C20.9395 3.78966 20.6428 3.66675 20.3333 3.66675ZM8.66667 3.66675V2.50008H13.3333V3.66675H8.66667Z"
-												fill="#454545"
-											/>
-											<path
-												d="M9.83333 18.8333V10.6667C9.83333 10.3572 9.71042 10.0605 9.49162 9.84171C9.27283 9.62292 8.97609 9.5 8.66667 9.5C8.35725 9.5 8.0605 9.62292 7.84171 9.84171C7.62292 10.0605 7.5 10.3572 7.5 10.6667V18.8333C7.5 19.1428 7.62292 19.4395 7.84171 19.6583C8.0605 19.8771 8.35725 20 8.66667 20C8.97609 20 9.27283 19.8771 9.49162 19.6583C9.71042 19.4395 9.83333 19.1428 9.83333 18.8333ZM14.5 18.8333V10.6667C14.5 10.3572 14.3771 10.0605 14.1583 9.84171C13.9395 9.62292 13.6428 9.5 13.3333 9.5C13.0239 9.5 12.7272 9.62292 12.5084 9.84171C12.2896 10.0605 12.1667 10.3572 12.1667 10.6667V18.8333C12.1667 19.1428 12.2896 19.4395 12.5084 19.6583C12.7272 19.8771 13.0239 20 13.3333 20C13.6428 20 13.9395 19.8771 14.1583 19.6583C14.3771 19.4395 14.5 19.1428 14.5 18.8333Z"
-												fill="#454545"
-											/>
-										</svg>
-									</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+			<p
+				v-for="(header, index) in headers"
+				:key="index"
+				:class="index === 0 ? 'col-span-1' : 'col-span-2'"
+				class="font-medium text-primary/50 mb-7"
+			>
+				{{ header }}
+			</p>
+			<div
+				v-for="(item, index) in products"
+				:key="index"
+				class="py-4 col-span-9 grid grid-cols-9 items-center border-t pt-8 border-black/10"
+			>
+				<div class="pr-8 col-span-1">
+					<img :src="item.image" class="rounded-[15px]" alt="Product Image" />
+				</div>
+				<div class="flex flex-col pr-8 h-full col-span-2 justify-between">
+					<p class="text-primary font-semibold line-clamp-2">
+						{{ item.title }}
+					</p>
+					<p class="text-primary font-bold text-[20px]">
+						{{ item.oldPrice }} ₽
+					</p>
+				</div>
+				<p class="text-primary pr-8 col-span-2 line-clamp-3">{{ item.desc }}</p>
+				<p class="text-primary pr-8 col-span-2 line-clamp-3">
+					RAD-COMBO-50/XXX/230/XXX/XXX/S4/XS
+				</p>
+				<div class="flex w-full col-span-2 justify-between items-center">
+					<div class="flex gap-5 items-center">
+						<button
+							class="cursor-pointer py-[10px] px-4 text-2xl text-primary"
+							@click="decrementCount(item.id)"
+						>
+							-
+						</button>
+						<button
+							class="text-2xl py-[19px] px-[27px] border-primary/10 rounded-[10px] text-primary"
+						>
+							{{ getCount(item.id) }}
+						</button>
+						<button
+							class="cursor-pointer text-2xl py-[10px] px-4 text-primary"
+							@click="incrementCount(item.id)"
+						>
+							+
+						</button>
+					</div>
+					<Icon
+						@click="removeProduct(item.id)"
+						icon="gg:trash"
+						class="text-3xl text-primary cursor-pointer"
+					/>
+				</div>
+			</div>
+		</div>
+		<div v-else class="text-8xl text-primary/50 py-40 font-bold">
+			<p class="text-center">No Products</p>
+			<img
+				class="flex justify-center gap-3 px-[500px] mt-8"
+				src="/notProduct.png"
+			/>
+		</div>
+		<div v-if="products.length > 0" class="p-11 rounded-[20px] bg-second mt-5">
+			<h3 class="text-[32px] font-bold text-primary">Оформление</h3>
+			<div class="grid grid-cols-3 gap-5 border-b border-primary/10 py-8">
+				<input
+					v-for="(item, index) in order"
+					:key="index"
+					:type="index != order.length - 1 ? 'text' : 'email'"
+					name=""
+					:placeholder="item"
+					class="py-[14px] px-5 border border-primary rounded-full bg-transparent"
+					id=""
+				/>
+			</div>
+			<h3 class="text-[32px] mt-[37px] font-bold text-primary">Доставка</h3>
+			<div class="grid grid-cols-3 gap-8 mb-11">
+				<input
+					type="text"
+					name=""
+					placeholder="Адрес доставки"
+					class="py-[14px] px-5 border col-span-2 border-primary rounded-full bg-transparent"
+					id=""
+				/>
+				<textarea
+					name=""
+					placeholder="Комментарий"
+					style="resize: none"
+					class="py-[18px] px-5 border col-span-2 border-primary rounded-[30px] w-full bg-transparent"
+					id=""
+					cols="30"
+					rows="6"
+				></textarea>
+			</div>
+		</div>
+		<div v-if="products.length > 0" class="p-12 rounded-[20px] bg-second mt-5">
+			<h3 class="text-[32px] font-bold text-primary">Оплата</h3>
+			<div class="grid grid-cols-3 gap-10">
+				<div class="flex items-center mt-8 col-span-1">
+					<label for="prod" class="text-primary/50 font-semibold"
+						>Товары
+						<input
+							name="prod"
+							type="text"
+							placeholder=".........................................."
+							class="text-primary/50 bg-transparent font-semibold px-1"
+						/>
+					</label>
+					<p class="text-primary/50 font-semibold">
+						{{ calculateTotalCost() }} ₽
+					</p>
+				</div>
+				<div class="flex items-center mt-8 col-span-1">
+					<label for="prod" class="text-primary/50 font-semibold"
+						>Доставка
+						<input
+							name="prod"
+							type="text"
+							placeholder=".........................................."
+							class="text-primary/50 bg-transparent font-semibold px-1"
+						/>
+					</label>
+					<p class="text-primary/50 font-semibold">
+						{{ (15 / 100) * Number(calculateTotalCost()) }} ₽
+					</p>
+				</div>
+				<h3 class="text-primary font-bold col-span-3 text-2xl mt-10">
+					{{
+						Number(calculateTotalCost()) +
+						Number((15 / 100) * Number(calculateTotalCost()))
+					}}
+					₽
+				</h3>
+				<button
+					@click="btn()"
+					class="col-span-1 w-full py-[14px] bg-primary text-white font-medium rounded-full"
+				>
+					Купить
+				</button>
+				<div class="flex gap-[7px] items-center col-span-2">
+					<Icon icon="teenyicons:tick-circle-outline" class="text-primary" />
+					<p class="text-sm font-semibold">
+						Я согласен наобработку моих персональных данных
+					</p>
 				</div>
 			</div>
 		</div>
@@ -78,7 +162,78 @@
 </template>
 
 <script setup>
+import { Icon } from '@iconify/vue'
+import { onMounted, ref } from 'vue'
 import { usePiniaStore } from '../store'
+
 const store = usePiniaStore()
+const products = ref([])
+const isLoading = ref(true)
+const counts = ref({})
+
+const headers = ['Фото', 'Товары', 'Описание', 'Артикул', 'Артикул']
+
+const order = ref(['ФИО', 'телефон', 'Электронная почта'])
+
+onMounted(() => {
+	setTimeout(() => {
+		products.value = store.basket.map(product => ({
+			...product,
+			count: getCount(product.id),
+		}))
+		isLoading.value = false
+	}, 1000)
+})
+
+function btn() {
+	alert('successfully failed!')
+}
+
+const removeProduct = productId => {
+	console.log('products.value:', products.value)
+	const index = products.value.findIndex(item => {
+		return item && item.id === productId
+	})
+
+	if (index !== -1) {
+		products.value.splice(index, 1)
+		store.removeProductBasket(productId)
+
+		console.log('store.basket content:', store.basket)
+		console.log('store.basket length:', store.basket.length)
+	} else {
+		console.error('Product not found:', productId)
+	}
+}
+
+const getCount = productId => counts.value[productId] || 1
+
+const incrementCount = productId => {
+	counts.value[productId] = counts.value[productId]
+		? counts.value[productId] + 1
+		: 1
+}
+
+const decrementCount = productId => {
+	if (counts.value[productId] && counts.value[productId] > 1) {
+		counts.value[productId]--
+	}
+}
+
+const calculateTotalCost = () => {
+	let total = 0
+	products.value.forEach(item => {
+		total += item.oldPrice * getCount(item.id)
+	})
+	store.totalPrice = total.toFixed(2) // Store total price in your store or component
+	return total.toFixed(2)
+}
 </script>
-<style lang="scss" scoped></style>
+
+<style scoped>
+input,
+textarea {
+	outline: none;
+}
+/* Add your custom styles here */
+</style>
