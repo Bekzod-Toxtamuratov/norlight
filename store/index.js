@@ -3,6 +3,20 @@ export const usePiniaStore = defineStore('pinia', {
 		return {
 			likedProducts: [],
 			basket: [],
+			orders: [
+				{
+					fullname: '',
+					phone: '',
+					product: [
+						
+					],
+				},
+				{
+					fullname: '',
+					phone: '',
+					product: [],
+				},
+			],
 		}
 	},
 	actions: {
@@ -29,9 +43,9 @@ export const usePiniaStore = defineStore('pinia', {
 				this.basket.splice(index, 1)
 			}
 		},
-		removeProductBasket(id){
-			this.basket = this.basket.filter(p => p.id!== id)
-		}
+		removeProductBasket(id) {
+			this.basket = this.basket.filter(p => p.id !== id)
+		},
 	},
 	persist: true,
 })

@@ -1,7 +1,8 @@
 <script setup>
 definePageMeta({
-    layout: "admin",
-});
+  layout: "admin",
+  middleware:['auth']
+})
 const { data } = await useFetch(
     `https://6684d16356e7503d1ae140ec.mockapi.io/products`
 )

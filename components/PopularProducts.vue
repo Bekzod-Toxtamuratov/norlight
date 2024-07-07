@@ -5,7 +5,7 @@ const products = ref([])
 onMounted(async () => {
 	try {
 		const response = await axios.get(
-			`https://6684d16356e7503d1ae140ec.mockapi.io/products`
+			`https://66855e79b3f57b06dd4c795c.mockapi.io/products`
 		)
 		products.value = response.data
 		isLoading.value = false
