@@ -7,60 +7,68 @@
 					Username
 					<input
 						v-model="userData.username"
-						class="w-full py-3 px-5 border rounded outline-none focus:border-primary"
+						class="text-black text-xl w-full py-3 px-5 border rounded outline-none focus:border-primary"
 						type="text"
 					/>
 				</label>
-				<label for="">
+				<label for="" class="relative">
 					Password
 					<input
-						@input="handleInput"
 						v-model="userData.password"
-						class="w-full py-3 px-5 border rounded outline-none focus:border-primary"
-						type="text"
+						class="text-black text-xl w-full py-3 px-5 border rounded outline-none focus:border-primary"
+						:type="check ? 'password' : 'text'"
 					/>
-
-					<!-- <span
-						v-if="$v.userData.password.minLength && $v.userData.password.$error"
-						class="text-red-500"
-						>parol kamida 6ta belgi bo'lishi kerak
-					</span> -->
+					<button
+						type="button"
+						@click="myfunction"
+						class="absolute top-1/2 right-5 transform -translate-y-1/2"
+					></button>
 				</label>
-				<h2 v-if="isError" class="text-red-500">Login or password wrong!</h2>
-				<button class="py-3 px-5 text-xl bg-primary rounded text-white">
+				<button
+					type="submit"
+					class="py-3 px-5 text-xl bg-primary rounded text-white"
+				>
 					Login
 				</button>
 			</form>
 		</div>
 	</div>
 </template>
-<script setup>
-definePageMeta({
-	layout: 'auth',
-})
 
-// import { useVuelidate } from '@vuelidate/core'
-// import { required, minLength } from '@vuelidate/validators'
+<script setup>
 import { reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import api from '../../../api2'
+
+const check = ref(false)
 const router = useRouter()
-const isError = ref(false)
 const userData = reactive({
-	username: 'emilys',
-	password: 'emilpspass',
+	username: '',
+	password: '',
 })
 
-api
-	.post('/auth/login', userData)
-	.then(res => {
-		localStorage.setItem('user', JSON.stringify(res.data))
-		router.push('/')
-		console.log('res', res)
-	})
-	.catch(err => {
-		isError.value = true
-		console.log('err', err)
-	})
+const myfunction = () => {
+	check.value = !check.value
+	console.log('check', check.value)
+}
+
+const loginUser = async () => {
+	try {
+		const res = await api.post('/auth/login', userData)
+		console.log('API Response:', res)
+
+		// Handle different response structures
+		const responseData = res.data || res
+		if (responseData) {
+			localStorage.setItem('user', JSON.stringify(responseData))
+			router.push('/')
+		} else {
+			throw new Error('Invalid response data')
+		}
+	} catch (err) {
+		console.error('Login error:', err)
+	}
+}
 </script>
 
 <style scoped></style>
