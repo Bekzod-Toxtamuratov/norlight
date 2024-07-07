@@ -3,18 +3,7 @@ export const usePiniaStore = defineStore('pinia', {
 		return {
 			likedProducts: [],
 			basket: [],
-			orders: [
-				{
-					fullname: '',
-					phone: '',
-					product: [],
-				},
-				{
-					fullname: '',
-					phone: '',
-					product: [],
-				},
-			],
+			orders: [],
 		}
 	},
 	actions: {

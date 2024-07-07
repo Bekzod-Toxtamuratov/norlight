@@ -2,7 +2,7 @@
 import axios from 'axios'
 definePageMeta({
 	layout: 'admin',
-	middleware: ['auth'],
+	// middleware: ['auth'],
 })
 const data = ref(null)
 const loading = ref(true)
@@ -32,6 +32,7 @@ async function deleteProduct(id) {
 			console.error('Error deleting product:', error)
 		})
 }
+fetchProducts()
 onMounted(() => {
 	fetchProducts()
 })

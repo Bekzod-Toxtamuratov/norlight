@@ -2,7 +2,7 @@
 import axios from 'axios'
 definePageMeta({
 	layout: 'admin',
-	middleware: ['auth'],
+	// middleware: ['auth'],
 })
 const router = useRouter()
 const newProduct = {

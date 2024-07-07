@@ -1,7 +1,7 @@
 <script setup>
 definePageMeta({
 	layout: 'admin',
-	middleware: ['auth'],
+	// middleware: ['auth'],
 })
 import axios from 'axios'
 const route = useRoute()
@@ -14,6 +14,7 @@ const newProduct = ref({
 	image: '',
 	description: '',
 })
+
 function updateProduct() {
 	try {
 		axios.put(
@@ -38,6 +39,10 @@ const fetchProduct = () => {
 		})
 }
 fetchProduct()
+onMounted(()=>{
+	fetchProduct()
+})
+
 console.log(newProduct.value)
 </script>
 
@@ -45,7 +50,7 @@ console.log(newProduct.value)
 	<div class="ml-[30px]">
 		<h1 class="text-[28px]">Create Product</h1>
 		<div class="mt-[20px]">
-			<p class="text-[16px] text-[16px]">Title</p>
+			<p class="text-[16px]">Title</p>
 			<input
 				class="w-[620px] text-[18px] p-[10px] h-[50px] bg-[#F8F8F8] rounded-[10px] mt-[10px]"
 				v-model="newProduct.title"
@@ -54,7 +59,7 @@ console.log(newProduct.value)
 			/>
 		</div>
 		<div class="mt-[20px]">
-			<p class="text-[16px] text-[16px]">Price</p>
+			<p class="text-[16px]">Price</p>
 			<input
 				class="w-[620px] text-[18px] p-[10px] h-[50px] bg-[#F8F8F8] rounded-[10px] mt-[10px]"
 				v-model="newProduct.newPrice"
@@ -63,7 +68,7 @@ console.log(newProduct.value)
 			/>
 		</div>
 		<div class="mt-[20px]" :model="newProduct">
-			<p class="text-[16px] text-[16px]">Image-url</p>
+			<p class="text-[16px]">Image-url</p>
 			<input
 				class="w-[620px] text-[18px] p-[10px] h-[50px] bg-[#F8F8F8] rounded-[10px] mt-[10px]"
 				v-model="newProduct.image"
@@ -72,7 +77,7 @@ console.log(newProduct.value)
 			/>
 		</div>
 		<div class="mt-[20px]">
-			<p class="text-[16px] text-[16px]">Description</p>
+			<p class="text-[16px]">Description</p>
 			<input
 				class="w-[620px] text-[18px] pl-[10px] pt-[30px] h-[50px] pb-[120px] bg-[#F8F8F8] rounded-[10px] mt-[10px]"
 				v-model="newProduct.description"

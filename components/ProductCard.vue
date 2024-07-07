@@ -17,7 +17,7 @@ const toggleDelete = () => {
 }
 
 const isLiked = computed(() => {
-	return store.likedProducts.findIndex(p => p.id === props.data.id) !== -1
+	return store.likedProducts.findIndex(p => p.id === props.data.id) === -1
 })
 
 const isInKorzina = computed(() => {
