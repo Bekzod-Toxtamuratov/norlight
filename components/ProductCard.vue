@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { usePiniaStore } from '../store'
 
 const store = usePiniaStore()
-
+console.log('da')
 const props = defineProps({
 	data: Object,
 })
