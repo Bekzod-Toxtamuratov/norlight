@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<BlogProduct class="mb-[60px]" />
+		<BlogProduct2 class="mb-[60px]" />
 		<!-- <Path /> -->
 	</div>
 </template>

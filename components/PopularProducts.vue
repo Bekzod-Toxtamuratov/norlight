@@ -14,6 +14,7 @@ onMounted(async () => {
 		isLoading.value = false
 	}
 })
+console.log('products: ' + products.value)
 </script>
 <template>
 	<div class="container mt-[100px]">
@@ -25,7 +26,7 @@ onMounted(async () => {
 			<div class="flex items-center justify-center">
 				<nuxt-link to="/products">
 					<button
-						class="max-md:hidden border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3 hover:bg-[#FF58065B] hover:text-white"
+						class="hover:translate-x-4 max-md:hidden border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3 hover:bg-[#FF58065B] hover:text-white"
 					>
 						Все товары
 						<svg
@@ -50,7 +51,7 @@ onMounted(async () => {
 
 		<nuxt-link to="/products">
 			<button
-				class="md:hidden w-full mt-10 border border-black rounded-full p-5 px-6 text-sm items-center justify-center flex gap-1 h-3 hover:bg-[#FF58065B] hover:text-white"
+				class="hover:translate-x-4 md:hidden w-full mt-10 border border-black rounded-full p-5 px-6 text-sm items-center justify-center flex gap-1 h-3 hover:bg-[#FF58065B] hover:text-white"
 			>
 				Все товары
 				<svg

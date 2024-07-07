@@ -5,7 +5,7 @@
 
 			<nuxt-link to="/katalog">
 				<button
-					class="max-md:hidden border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3 hover:bg-[#FF58065B] hover:text-white"
+					class="hover:translate-x-4 max-md:hidden border border-black rounded-full p-5 px-6 text-sm items-center flex gap-1 h-3 hover:bg-[#FF58065B] hover:text-white"
 				>
 					Весь каталог
 					<svg
