@@ -4,8 +4,13 @@
 			class="container mx-auto flex justify-between flex-col md:flex-row items-center space-y-6 md:space-y-0"
 		>
 			<div class="flex flex-col items-center md:items-start">
-				<img src="/images/logo.png" alt="Nornlight Logo" class="mb-4" />
-				<p class="text-lg font-semibold">8 (800) 890-46-56</p>
+				<nuxt-link to="/">
+					<img src="/images/logo.png" alt="Nornlight Logo" class="mb-4" />
+				</nuxt-link>
+
+				<nuxt-link to="/contacts">
+					<p class="text-lg font-semibold">8 (800) 890-46-56</p>
+				</nuxt-link>
 				<div class="flex items-center mt-4 space-x-4">
 					<img src="/images/visa.png" alt="Visa" class="h-8" />
 				</div>
@@ -77,26 +82,38 @@
 					<h4 class="font-semibold">Покупателям</h4>
 					<ul class="space-y-1">
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700"
-								>О компании</a
+							<nuxt-link to="/about" class="text-gray-500 hover:text-gray-700"
+								>О компании</nuxt-link
 							>
 						</li>
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700">
+							<nuxt-link
+								to="/shipping"
+								class="text-gray-500 hover:text-gray-700"
+							>
 								Доставка и оплата
-							</a>
+							</nuxt-link>
+						</li>
+						<li></li>
+						<nuxt-link to="/return" class="text-gray-500 hover:text-gray-700">
+							Возврат
+						</nuxt-link>
+						<li>
+							<nuxt-link to="/garant" class="text-gray-500 hover:text-gray-700"
+								>Гарантии</nuxt-link
+							>
 						</li>
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700">Возврат</a>
+							<nuxt-link
+								to="/contacts"
+								class="text-gray-500 hover:text-gray-700"
+								>Контакты</nuxt-link
+							>
 						</li>
 						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700">Гарантии</a>
-						</li>
-						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700">Контакты</a>
-						</li>
-						<li>
-							<a href="#" class="text-gray-500 hover:text-gray-700">Блог</a>
+							<nuxt-link to="/blog" class="text-gray-500 hover:text-gray-700"
+								>Блог</nuxt-link
+							>
 						</li>
 					</ul>
 				</div>
